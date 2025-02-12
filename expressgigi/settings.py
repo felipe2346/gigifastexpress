@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh", 'localhost', 'gigifastexpress.com', 'www.gigifastexpress.com']
+ALLOWED_HOSTS = ["127.0.0.1", ".onrender.com", 'localhost', 'gigifastexpress.com', 'www.gigifastexpress.com']
 
 
 # Application definition
