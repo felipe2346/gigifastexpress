@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .tracking-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tracking-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .tracking-header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+        }
+        .step .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .step.active .circle {
+            background: #28a745;
+        }
+        .step.complete .circle {
+            background: #28a745;
+        }
+        .step.blocked .circle {
+            background: #e40707;
+        }
+        .step.complete .circle::after {
+            content: '\2713'; /* Checkmark symbol */
+            font-size: 16px;
+        }
+        .step .content {
+            display: flex;
+            flex-direction: column;
+        }
+        .step .label {
+            font-size: 14px;
+            color: #333;
+        }
+        .step .date-time {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="tracking-container">
+        <div class="tracking-header">
+            <h1>Tracking Status</h1>
+        </div>
+        <div class="steps">
+            <div class="step complete">
+                <div class="circle"></div>
+                <div class="content">
+                    <div class="label">Dispatched</div>
+                    <div class="date-time">2024-11-20 10:30 AM</div>
+                </div>
+            </div>
+            <div class="step complete">
+                <div class="circle"></div>
+                <div class="content">
+                    <div class="label">In Transit</div>
+                    <div class="date-time">2024-11-22 02:45 PM</div>
+                </div>
+            </div>
+            <!-- <div class="step active">
+                <div class="circle"></div>
+                <div class="content">
+                    <div class="label">Withheld</div>
+                    <div class="date-time">2024-11-25 09:00 AM</div>
+                </div>
+            </div> -->
+            <div class="step blocked">
+                <div class="circle"></div>
+                <div class="content">
+                    <div class="label">Withheld</div>
+                    <div class="date-time">2024-11-25 09:00 AM</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="circle"></div>
+                <div class="content">
+                    <div class="label">Delivered</div>
+                    <div class="date-time">Pending</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--==================================================-->
+<!-- Start Prygo Breadcumb Area -->
+<!--==================================================-->
+<div class="breadcumb-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="breadcumb-content">
+					<div class="breadcumb-title">
+						<h1>Contact Us</h1>
+					</div>
+					<div class="breadcumb-content-menu">
+						<ul>
+							<li><a href="{% url 'frontend:home' %}">Home <i class="fas fa-angle-right"></i></a></li>
+							<li><span>Contact Us</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--==================================================-->
+<!-- End Prygo Breadcumb Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Prygo Contact Addreess Area -->
+<!--==================================================-->
+<div class="contact-address-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<div class="section-title">
+					<h5>Get In Touch</h5>
+					<h1>Don't Hesitate Contact</h1>
+					<h1>With Us And solve</h1>
+					<h1>Your problem</h1>
+					<p>We have a 24 hours standby customer support to attend to your needs and questions. We are a company committed to providing unparalleled customer satisfaction. Understanding industry needs we have built a solid reputation among our clients whose business depends on our performance.</p>
+				</div>
+				<div class="contact-address-button">
+					<div class="button">
+						<a href="#">Read More <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<div class="contact-address-box">
+					<div class="contact-address-single-box">
+						<div class="contact-address-icon">
+							<i class="far fa-comments"></i>
+						</div>
+						<div class="contact-address-content">
+							<h5>Talk with Us</h5>
+							<p>+12 - 658 - 9854</p>
+							<!-- <p>+12 - 666 - 9765</p> -->
+						</div>
+					</div>
+					<div class="contact-address-single-box">
+						<div class="contact-address-icon">
+							<i class="far fa-envelope"></i>
+						</div>
+						<div class="contact-address-content">
+							<h5>Email Us</h5>
+							<p class="small">contact@expressgigilogistics.com</p>
+							<!-- <p>+12 - 658 - 9854</p> -->
+						</div>
+					</div>
+					<div class="contact-address-single-box">
+						<div class="contact-address-icon">
+							<i class="fas fa-map-marker-alt"></i>
+						</div>
+						<div class="contact-address-content">
+							<h5>Office Location</h5>
+							<p>1829 State Street, Detroit, MI,</p>
+							<p>United States</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- Start Prygo Contact Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Prygo Contact Area -->
+<!--==================================================-->
+<div class="contact-area">
+	<div class="container">
+		<div class="row contact-box">
+			<div class="col-lg-5">
+				<div class="contact-thumb">
+					<img src="{% static 'frontend/assets/images/resource/contacts.jpg' %}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="contact-form">
+					<div class="contact-title">
+						<h2>Live Chate With Us</h2>
+					</div>
+					<form action="" method="POST" id="dreamit-form">
+						<div class="row">
+							<div class="col-lg-6 col-md-6">
+								<div class="input-box">
+									<input type="text" name="Name" placeholder="Full Name" required="">
+								</div>
+							</div>									
+							<div class="col-lg-6 col-md-6">
+								<div class="input-box">
+									<input type="text" name="Email" placeholder="Email Address">
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12">
+								<div class="input-box">
+									<textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message..."></textarea>
+								</div>
+								<div class="input-button">
+									<button type="submit">Submit Now <i class="fas fa-arrow-right"></i></button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div id="status"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- END Prygo Contact Area -->
+<!--==================================================-->
+{% endblock %}

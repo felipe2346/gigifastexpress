@@ -1,0 +1,196 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Express GIGIWAY - Trusted Transport & Logistics Company</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="56x56"
+      href="{% static 'frontend/assets/images/fav-icon/icon.png' %}"
+    />
+    <!-- bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/bootstrap.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/owl.carousel.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- animate CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/animate.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- animated-text CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/animated-text.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- font-awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/all.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- font-flaticon CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/flaticon.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- theme-default CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/theme-default.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- meanmenu CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/meanmenu.min.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- Main Style CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- transitions CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/owl.transitions.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- venobox CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/venobox/venobox.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- responsive CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/assets/css/responsive.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- modernizr js -->
+    <script src="{% static 'frontend/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="{% static 'frontend/npm/bootstrap-icons%401.9.1/font/bootstrap-icons.css' %}"
+    />
+
+    <style>
+      #google_translate_element {
+        color: transparent;
+      }
+      #google_translate_element a {
+        display: none;
+      }
+      select.google_translate_element {
+        color: black;
+      }
+      div.goog-te-gadget {
+        color: transparent !important;
+      }
+  </style>
+  </head>
+  <body>
+    <!-- loder -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loder-section left-section"></div>
+      <div class="loder-section right-section"></div>
+    </div>
+
+    {% include './includes/navbar.html' %} 
+    {% block content %}{% endblock %}
+    {% include './includes/footer.html' %} 
+
+    <!--==================================================-->
+    <!-- Start scrollup section Area -->
+    <!--==================================================-->
+    <!-- scrollup section -->
+    <div class="scroll-area">
+      <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+          <div class="go-top go-top-button">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-arrow-up"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start scrollup section Area -->
+    <!--==================================================-->
+
+    <!-- google transalte  -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <!-- jquery js -->
+    <script src="{% static 'frontend/assets/js/vendor/jquery-3.6.2.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'frontend/assets/js/bootstrap.min.js' %}"></script>
+    <!-- carousel js -->
+    <script src="{% static 'frontend/assets/js/owl.carousel.min.js' %}"></script>
+    <!-- counterup js -->
+    <script src="{% static 'frontend/assets/js/jquery.counterup.min.js' %}"></script>
+    <!-- waypoints js -->
+    <script src="{% static 'frontend/assets/js/waypoints.min.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'frontend/assets/js/wow.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'frontend/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- venobox js -->
+    <script src="{% static 'frontend/venobox/venobox.js' %}"></script>
+    
+    <!--  animated-text js -->
+    <script src="{% static 'frontend/assets/js/animated-text.js' %}"></script>
+    <!-- venobox min js -->
+    <script src="{% static 'frontend/venobox/venobox.min.js' %}"></script>
+    <!-- isotope js -->
+    <script src="{% static 'frontend/assets/js/isotope.pkgd.min.js' %}"></script>
+    <!-- jquery meanmenu js -->
+    <script src="{% static 'frontend/assets/js/jquery.meanmenu.js' %}"></script>
+    <!-- jquery scrollup js -->
+    <script src="{% static 'frontend/assets/js/jquery.scrollUp.js' %}"></script>
+    <!-- theme js -->
+    <script src="{% static 'frontend/assets/js/theme.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/jquery.barfiller.js' %}"></script>
+    <!-- jquery js -->
+  </body>
+</html>

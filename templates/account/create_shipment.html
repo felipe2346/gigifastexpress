@@ -1,0 +1,201 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .bg-light{
+        background-color: rgb(202, 207, 212) !important;
+    }
+</style>
+<div class="card bg-danger mb-4">
+    <div class="card-body">
+        <h4 class="text-center text-white">Create a New Shipment Here</h4>
+        <hr>
+
+        <form action="." method="POST" id="add_shipment_form">
+            {% csrf_token %}
+            {% include './include/alert.html' %}
+            {% include './include/form_errors.html' %}
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <div class="card-title fw-bold">Sender Information</div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.sender_name.id_for_label}}" class="form-label">Sender Name</label>
+                                        {{form.sender_name}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.sender_email.id_for_label}}" class="form-label">Sender Email</label>
+                                        {{form.sender_email}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.sender_phone.id_for_label}}" class="form-label">Sender Phone</label>
+                                        {{form.sender_phone}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.sender_address.id_for_label}}" class="form-label">Sender Address</label>
+                                        {{form.sender_address}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <div class="card-title fw-bold">Receiver Information</div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.receiver_name.id_for_label}}" class="form-label">Receiver Name</label>
+                                        {{form.receiver_name}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.receiver_email.id_for_label}}" class="form-label">Receiver Email</label>
+                                        {{form.receiver_email}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.receiver_phone.id_for_label}}" class="form-label">Receiver Phone</label>
+                                        {{form.receiver_phone}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.receiver_address.id_for_label}}" class="form-label">Receiver Address</label>
+                                        {{form.receiver_address}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="other_formfields mt-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.tracking_number.id_for_label}}" class="form-label">Tracking Number</label>
+                                        {{form.tracking_number}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.weight.id_for_label}}" class="form-label">Weight</label>
+                                        {{form.weight}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.content.id_for_label}}" class="form-label">Content</label>
+                                        {{form.content}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.shipping_type.id_for_label}}" class="form-label">Shipping Type</label>
+                                        {{form.shipping_type}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.origin_office.id_for_label}}" class="form-label">Origin Office</label>
+                                        {{form.origin_office}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.destination_office.id_for_label}}" class="form-label">Destination Office</label>
+                                        {{form.destination_office}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.shipping_date.id_for_label}}" class="form-label">Shipping Date</label>
+                                        {{form.shipping_date}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.delivery_date.id_for_label}}" class="form-label">Delivery Date</label>
+                                        {{form.delivery_date}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.booking_mode.id_for_label}}" class="form-label">Booking Mode</label>
+                                        {{form.booking_mode}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="{{ form.amount_paid.id_for_label}}" class="form-label">Amount Paid</label>
+                                        {{form.amount_paid}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-here">
+                        <button type="submit" class="btn btn-dark fw-bold w-100 mt-3" id="add_shipment_btn">
+                            <span id="add_shipment_btn_text">Save Now</span>
+                            <div class="spinner-border text-light spinner-border-sm d-none" role="status" id="add_shipment_spinner">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const addShipmentForm = document.querySelector('#add_shipment_form');
+    const addShipmentBtn = document.querySelector('#add_shipment_btn');
+    const addShipmentBtnText = document.querySelector('#add_shipment_btn_text');
+    const addShipmentSpinner = document.querySelector('#add_shipment_spinner');
+
+    addShipmentForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        console.log('clicked');
+
+        addShipmentBtnText.style.display = 'none';
+        addShipmentSpinner.classList.remove('d-none');
+        addShipmentBtn.disabled = true;
+
+        addShipmentForm.submit();
+    })
+</script>
+{% endblock %}

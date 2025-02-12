@@ -1,0 +1,139 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .bg-primary{
+        background-color: #0e1317 !important;
+    }
+    .bg-success{
+        background-color: #011b0b !important;
+    }
+    .btn-danger{
+        background-color: #ff3c00 !important;
+    }
+</style>
+<!--==================================================-->
+<!-- Start Prygo Breadcumb Area -->
+<!--==================================================-->
+{% if shipments %}
+{% else %}
+<div class="breadcumb-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="breadcumb-content">
+					<!-- <div class="breadcumb-title">
+						<h1>Track Shipment</h1>
+					</div> -->
+					<div class="breadcumb-content-menu">
+						<ul>
+							<li><a href="{% url 'frontend:home' %}">Home <i class="fas fa-angle-right"></i></a></li>
+							<li><span>Track shipment</span></li>
+						</ul>
+					</div>
+                    <div class="row justify-content-center align-items-center mt-4">
+                        <div class="col-md-5">
+                            <form action="." method="post">
+                                {% csrf_token %}
+                                <div class="input-group mb-3">
+                                    <input type="text" name="tracking_code" class="form-control" placeholder="Enter Tracking Code">
+                                    <button class="btn btn-danger" type="submit" id="tracking_btn">Track Now</button>
+                                </div>
+                                {% include '../account/include/alert.html' %}
+                            </form>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
+<!--==================================================-->
+<!-- End Prygo Breadcumb Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start track result Area -->
+<!--==================================================-->
+{% if shipments %}
+<section id="tracking_result ">
+    <div class="container py-3 py-md-5 mt-2 mt-md-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-10">
+                <div class="card shadow">
+                    <div class="card-body">
+                        {% include './includes/tracking_alert.html' %}
+                        
+                        <hr>
+                        {% for shipment in shipments %}
+                        <div class="card bg-secondary p-1 border-0"> 
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table_will_space">
+                                        <tbody>
+                                            <tr >
+                                                <td class="bg-secondary border-0 fw-bold">Tracking Code:</td>
+                                                <td class="border-0 bg-light mb-3">{{shipment.tracking_number}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Content:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.content}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Weight:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.weight}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Shipping Date:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.shipping_date}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Estimated Delivery Date:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.delivery_date}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Shipment Type:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.shipping_type}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Origin Office:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.origin_office}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Destination Office:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.destination_office}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Total Freight:</td>
+                                                <td class="border-0 bg-light col-7">{{shipment.amount_paid}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Booking Mode:</td>
+                                                <td class="border-0 bg-primary text-white col-7">{{shipment.booking_mode}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-secondary border-0 fw-bold col-5">Status:</td>
+                                                <td class="border-0 bg-success text-white col-7">{{latest_update.status}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<!--==================================================-->
+<!-- End track result Area -->
+<!--==================================================-->
+{% endblock %}

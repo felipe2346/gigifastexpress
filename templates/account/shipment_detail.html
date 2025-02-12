@@ -1,0 +1,234 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .bg-secondary{
+        background-color: rgb(212, 211, 218) !important;
+    }
+    .bg-light{
+        background-color: rgb(237, 240, 241) !important;
+    }
+    .table_will_space {
+        border-collapse: separate;
+        border-spacing:0 20px;
+    }
+
+    .comment-header{
+        color: rgb(229, 229, 241);
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    .comment-card{
+        border-top-right-radius: 90px !important;
+        border-bottom-left-radius: 78px !important;
+    }
+</style>
+<div class="row justify-content-center align-items-center mb-5">
+    <div class="col-md-11">
+        <div class="card p-1">
+            <div class="card-body">
+                <h4 class="card-header text-center">Shipment Details For Code: {{shipment.tracking_number}}</h4>
+                {% include './include/alert.html' %}
+
+
+                <!-- invoice btn -->
+                 <a href="{% url 'account:view_receipt' shipment.pk %}" class="btn btn-secondary fw-bold mt-2 btn-sm">Generate Invoice</a>
+                <hr>
+
+                <!-- live tracking html -->
+                <div class="tracking-container">
+                    <div class="tracking-header">
+                        <h1>Live Tracking Status</h1>
+                    </div>
+                    <div class="steps">
+                        {% for update in live_update %}
+                            <div class="step {{update.stages_status}}">
+                                <div class="circle"></div>
+                                <div class="label">{{update.stages_label}}</div>
+                                <div class="date-time">{{update.created_on}}</div>
+                            </div>
+                        {% endfor %}
+                        
+                        
+
+                        <!-- pending that will disappear -->
+                        {% if update_count <= 0 %}
+                            <div class="step pending">
+                                <div class="circle"></div>
+                                <div class="label">Dispatch</div>
+                                <div class="date-time">Pending</div>
+                            </div>
+                        {% endif %}
+                        {% if update_count <= 1 %}
+                            <div class="step pending">
+                                <div class="circle"></div>
+                                <div class="label">Pending</div>
+                                <div class="date-time">Pending</div>
+                            </div>
+                        {% endif %}
+                        {% if update_count <= 2 %}
+                        <div class="step pending">
+                            <div class="circle"></div>
+                            <div class="label">Pending</div>
+                            <div class="date-time">Pending</div>
+                        </div>
+                        {% endif %}
+                        {% if update_count <= 3 %}
+                        <div class="step pending">
+                            <div class="circle"></div>
+                            <div class="label">Pending</div>
+                            <div class="date-time">Pending</div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+                <!-- comment card -->
+                <div class="tracking-container p-0 p-3 comment-card bg-danger mt-3">
+                    <p class="comment-header">
+                        {{latest_update.status}}
+                    </p>
+                    <p class="text-center text-white"><strong>Update: </strong> {{latest_update.remark}}</p>
+                    <hr style="border-color: #fff;">
+                    <p class="text-center text-light">{{latest_update.created_on}}</p>
+                </div>
+                
+                
+                <hr>
+
+            </div>
+            <div class="card bg-secondary p-1 border-0"> 
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table_will_space">
+                            <tbody>
+                                <tr >
+                                    <td class="bg-secondary border-0 fw-bold">Tracking Code:</td>
+                                    <td class="border-0 bg-light mb-3">{{shipment.tracking_number}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Content:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.content}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Weight:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.weight}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Shipping Date:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.shipping_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Estimated Delivery Date:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.delivery_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Shipment Type:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.shipping_type}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Origin Office:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.origin_office}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Destination Office:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.destination_office}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Total Freight:</td>
+                                    <td class="border-0 bg-light col-7">{{shipment.amount_paid}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Booking Mode:</td>
+                                    <td class="border-0 bg-primary text-white col-7">{{shipment.booking_mode}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-secondary border-0 fw-bold col-5">Status:</td>
+                                    <td class="border-0 bg-success text-white col-7">{{latest_update.status}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-dark text-white mt-2">
+                {% include './include/alert.html' %}
+                {% include './include/form_errors.html' %}
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-condensed">
+                            <thead>
+                              <tr>
+                                <th scope="col">Date /Time</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Remark</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            {% for update in live_update %}
+                              <tr>
+                                <td>{{update.created_on}}</td>
+                                <td>{{update.current_location}}</td>
+                                <td>{{update.status}}</td>
+                                <td>{{update.remark}}</td>
+                                <td>
+                                    <a href="{% url 'account:update_live_update' update.id %}" class="btn btn-primary text-white btn-sm fw-bold btn-table">Update</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'account:delete_live_update' update.id %}" class="btn btn-danger text-white btn-sm fw-bold btn-table">Delete</a>
+                                </td>
+                              </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+                    <button href="" id="add_update_btn" class="btn btn-primary fw-bold">Add Live Update</button>
+                    
+                    <hr>
+                    <!-- live update form -->
+                    <section id="update_live_form_container">
+                        <div class="update_live_form d-none" id="">
+                            <form action="." method="POST">
+                                {% csrf_token %}
+                                {{form.as_p}}
+    
+                                <button type="submit" class="btn btn-secondary fw-bold w-100">Save Now</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const addUpdateBtn = document.querySelector('#add_update_btn');
+    const addUpdateform = document.querySelector('.update_live_form');
+
+    addUpdateBtn.addEventListener('click', (e)=>{
+        e.preventDefault()
+        console.log('btn is clicked');
+        addUpdateform.classList.remove('d-none')
+    });
+</script>
+
+<!-- If form was submitted, scroll to the bottom -->
+{% if form_submitted %}
+<script>
+    window.onload = function() {
+        window.scrollTo(0, document.body.scrollHeight);
+    };
+</script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,133 @@
+{% load static %}
+
+<style>
+	.exgigi_logome{
+		width: 240px;
+	}
+</style>
+
+<!--==================================================-->
+<!-- Start Prygo Header Top Area -->
+<!--==================================================-->
+<div class="header-top-area">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div class="single-header-top-address fast">
+          <div class="top-address-icon">
+            <img
+              src="{% static 'frontend/assets/images/resource/ht1.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="top-address-text">
+            <span>Email</span>
+            <p class="small">contact@expressgigilogistics.com</p>
+          </div>
+        </div>
+        <div class="single-header-top-address last">
+          <div class="top-address-icon">
+            <img
+              src="{% static 'frontend/assets/images/resource/ht2.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="top-address-text">
+            <span>Office</span>
+            <p>Mon - Sun, 9:00 AM - 9:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="header-top-button">
+			<!-- <div id="google_translate_element" class="mt-2 d-none d-md-block"></div> -->
+          <a href="{% url 'frontend:track_shipment' %}">Track shipment <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!-- End Prygo Header Top Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Prygo Main Menu Area -->
+<!--==================================================-->
+<div id="sticky-header" class="prygo_nav_manu">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-lg-2">
+				<div class="logo">
+					<a class="logo_img" href="{% url 'frontend:home' %}" title="expressgigi">
+						<img src="{% static 'frontend/assets/images/exgigi_logo.png' %}" alt="" class="exgigi_logome">
+					</a>
+					<a class="main_sticky" href="{% url 'frontend:home' %}" title="expressgigi">
+						<img src="{% static 'frontend/assets/images/exgigi_logo.png' %}" alt="astute" class="exgigi_logome">
+						<!-- <img src="{% static 'frontend/assets/images/logo.png' %}" alt="astute"> -->
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-6 pl-0 pr-0">
+				<nav class="prygo_menu">
+					<ul class="nav_scroll">
+						<li><a href="{% url 'frontend:home' %}">Home</a>
+						</li>
+						<li><a href="{% url 'frontend:about' %}">About</a></li>
+			
+						<!-- <li><a href="#">Services</a>
+						</li> -->
+						<li><a href="{% url 'frontend:contact' %}">Contact</a></li>
+						<li><a href="{% url 'frontend:track_shipment' %}">Track Shipment</a></li>
+						<li><a href="{% url 'frontend:login' %}">Sign In</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-lg-4">
+				<div class="header-contact-btc">
+					<div class="header-src-btn">
+						<div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
+					</div>
+					<div class="header-contact">
+						<div class="header-contact-icon">
+							<img src="{% static 'frontend/assets/images/resource/csp.png' %}" alt="">
+						</div>
+						<div class="header-contact-text">
+							<span>Call Us</span>
+							<p>+12 - 658 - 9854</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- prygo Mobile Menu Area -->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+	<div class="mobile-menu">
+		<nav class="prygo_menu">
+			<ul class="nav_scroll">
+				<li><a href="{% url 'frontend:home' %}">Home</a>
+					
+				</li>
+				<li><a href="{% url 'frontend:about' %}">About</a></li>
+	
+				<!-- <li><a href="#">Services</a>
+				</li> -->
+				<li><a href="{% url 'frontend:contact' %}">Contact</a></li>
+				<li><a href="{% url 'frontend:track_shipment' %}">Track Shipment</a></li>
+				<li><a href="{% url 'frontend:login' %}">Sign In</a></li>
+				<li><div id="google_translate_element" class="mt-3 d-sm-none"></div></li>
+			</ul>
+			
+		</nav>
+		
+	</div>
+</div>
+<!--==================================================-->
+<!-- End Prygo Main Menu Area -->
+<!--==================================================-->

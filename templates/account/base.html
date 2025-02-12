@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metro World Express - A service you can trust</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'account/account.css' %}">
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <div class="mb-5"></div>
+      <hr style="border-color: cornsilk;">
+      <a href="{% url 'account:dashboard' %}">Dashboard</a>
+      <a href="{% url 'account:create_shipment' %}">Create New Shipment</a>
+      <a href="{% url 'frontend:logout' %}">Logout</a>
+      <!-- <a href="#">Services</a> -->
+      <!-- <a href="#">Contact</a> -->
+    </div>
+    <div class="content" id="content">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <button class="btn btn-outline-light" id="toggleButton">☰</button>
+        </div>
+      </nav>
+      <div class="container-fluid mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'account/account.js' %}"></script>
+  </body>
+</html>

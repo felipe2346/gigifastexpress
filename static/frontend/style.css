@@ -1,0 +1,4553 @@
+/*===============================================
+Template Name: Prygo - Transport & Logistics HTML5 Template
+Author:  https://themeforest.net/user/dreamit-solution
+Description: Description
+Version: 1.0.0
+Text Domain: Prygo
+Tags:   delivery company, grid, logistics, moving, moving company, shipping, courier, shipping company, storage, transport, transport company, warehouse.
+================================================*/
+
+/*TABLE OF CONTENTS*/
+/*=====================
+01. Prygo Header Top Menu Area Css
+02. Prygo Nav Menu Area Css 
+03. Prygo Slider Area Css
+04. Prygo Breadcumb Area Css
+05. Prygo Featrue Area Css
+06. Prygo Section Title Css
+07. Prygo About Area Css
+08. Prygo Service Area Css
+09. Prygo Service Details Area Css
+10. Prygo Video Area Css
+11. Prygo Why Choose Us Area Css
+12. Prygo Portfolio Area Css 
+13. Prygo Portfolio Details Area Css
+14. Prygo Testimonial Area Css
+15. Prygo Pricing Area Css
+16. Prygo Skill Area Css
+17. Prygo Team Area Css
+18. Prygo Counter Area Css
+19. Prygo Contact Area Css
+20. Prygo Mission Vision Area Css
+21. Prygo Mission Area Css
+22. Prygo Contact Address Area Css
+23. Prygo Blog Area Css
+24. Prygo Blog Details Area Css
+25. Prygo Case Study Area Css
+26. Prygo Faq Area Css
+27. Prygo News Letter Area CSS
+28. Prygo Footer Area CSS
+29. Prygo Scrollup Section
+30. Prygo Search Popup Css
+31. Prygo Loader Css
+=======================*/
+
+/*=========================================
+ <-- Prygo Header Top Menu Area Css  -->
+===========================================*/
+
+.header-top-area {
+  background: #0e1317;
+  padding: 14px 100px 18px;
+  position: relative;
+}
+
+.header-top-area::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 28%;
+  background: linear-gradient(90deg, #f02830 -20.95%, #ff5e14 102.22%);
+  clip-path: polygon(12% 0%, 100% 0%, 100% 101%, 0% 101%);
+}
+
+.single-header-top-address {
+  margin-right: 80px;
+  float: left;
+}
+
+.single-header-top-address.fast {
+  padding-left: 40px;
+}
+
+.single-header-top-address.last {
+  margin-right: 0;
+  position: relative;
+}
+
+.single-header-top-address.last:after {
+  position: absolute;
+  content: "";
+  left: -40px;
+  top: 8px;
+  height: 45px;
+  width: 1px;
+  background: #aeadad;
+}
+
+.top-address-icon {
+  float: left;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.top-address-text {
+  overflow: hidden;
+}
+
+.top-address-text p {
+  color: #fff;
+  line-height: 20px;
+  margin: 0;
+}
+
+.top-address-text span {
+  color: #ced3d9;
+  font-size: 12px;
+}
+
+.header-top-button {
+  text-align: right;
+}
+
+.header-top-button a {
+  color: #0e1317;
+  padding: 14px 42px;
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #fff;
+  display: inline-block;
+  border-radius: 3px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.header-top-button a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #0e1317;
+  z-index: -1;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.header-top-button a i {
+  margin-left: 6px;
+}
+
+.header-top-button a:hover {
+  color: #fff;
+}
+
+.header-top-button a:hover:before {
+  width: 100%;
+}
+
+ul.sub-menu li a span {
+  background: #ff3c00;
+  padding: 5px 10px;
+  color: #fff;
+  opacity: 1;
+  border-radius: 2px;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+
+ul.sub-menu li:hover a span {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*=====================================
+<--  Prygo Nav Menu Area Css -->
+=======================================*/
+
+.prygo_nav_manu {
+  padding: 0 100px;
+}
+
+.prygo_nav_manu:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 45%;
+  width: 28%;
+  background: linear-gradient(90deg, #f02830 -20.95%, #ff5e14 102.22%);
+  clip-path: polygon(0% 0%, 100% 0%, 65% 101%, 0% 101%);
+}
+
+.sticky {
+  left: 0;
+  margin: auto;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.1);
+  background: #10102e !important;
+  transition: 0.5s;
+  z-index: 999;
+  padding: 10px 100px;
+}
+
+.logo {
+  position: relative;
+  margin-top: -68px;
+}
+
+.sticky .logo {
+  margin-top: 0;
+}
+
+.sticky.prygo_nav_manu:before {
+  display: none;
+}
+
+/* prygo Menu Css*/
+
+nav.prygo_menu {
+  text-align: right;
+}
+
+.prygo_menu ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.prygo_menu > ul > li {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.prygo_menu > ul > li > a {
+  display: block;
+  margin: 20px 10px 18px;
+  -webkit-transition: 0.5s;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav.prygo_menu span {
+  font-size: 13px;
+  padding-left: 6px;
+  font-family: FontAwesome;
+  opacity: 0.5;
+}
+
+.prygo_menu > ul > li > a:hover {
+  color: #ff3c00;
+}
+
+/*** Sub Menu Style ***/
+.prygo_menu ul .sub-menu {
+  position: absolute;
+  left: 0;
+  top: 130%;
+  width: 217px;
+  text-align: left;
+  background: #fff;
+  margin: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  visibility: hidden;
+  border-top: 2px solid #ff3c00;
+  opacity: 0;
+}
+
+.prygo_menu ul li:hover > .sub-menu {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 100%;
+  opacity: 1;
+  z-index: 9999;
+}
+
+.prygo_menu ul .sub-menu li {
+  position: relative;
+}
+
+.prygo_menu ul .sub-menu li a {
+  display: block;
+  padding: 12px 20px;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: normal;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  -webkit-transition: 0.1s;
+  visibility: inherit !important;
+  color: #211e3b !important;
+}
+
+.prygo_menu ul .sub-menu li:hover > a,
+.prygo_menu ul .sub-menu .sub-menu li:hover > a,
+.prygo_menu ul .sub-menu .sub-menu .sub-menu li:hover > a,
+.prygo_menu ul .sub-menu .sub-menu .sub-menu .sub-menu li:hover > a {
+  background: #ff3c00;
+  color: #fff !important;
+}
+
+/* sub menu 2 */
+
+.prygo_menu ul .sub-menu .sub-menu {
+  left: 100%;
+  top: 130%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
+}
+
+.prygo_menu ul .sub-menu li:hover > .sub-menu {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 0%;
+}
+
+/* sub menu 3 */
+
+.prygo_menu ul .sub-menu .sub-menu li {
+  position: relative;
+}
+
+.prygo_menu ul .sub-menu .sub-menu .sub-menu {
+  right: 100%;
+  left: auto;
+  top: 130%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
+}
+
+.prygo_menu ul .sub-menu .sub-menu li:hover > .sub-menu {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 0%;
+}
+
+/* sub menu 4 */
+
+.prygo_menu ul .sub-menu .sub-menu .sub-menu li {
+  position: relative;
+}
+
+.prygo_menu ul .sub-menu .sub-menu .sub-menu .sub-menu {
+}
+
+.prygo_menu ul .sub-menu .sub-menu .sub-menu li:hover > .sub-menu {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 0%;
+}
+
+.prygo_menu li a:hover:before {
+  width: 100%;
+}
+
+.prygo_nav_manu.sticky .logo_img {
+  display: none;
+}
+
+.main_sticky {
+  display: none;
+}
+
+.prygo_nav_manu.sticky .main_sticky {
+  display: inherit;
+}
+
+.sticky .prygo_menu li a {
+  color: #fff;
+}
+
+.prygo_nav_manu.sticky a.dtbtn {
+  color: #fff;
+  background: #f16722;
+  border: 2px solid #f16722;
+}
+
+.prygo_nav_manu.sticky a.dtbtn:hover {
+  color: #43baff;
+}
+
+.mobile-menu.mean-container {
+  overflow: hidden;
+}
+
+/* Header Contact Right CSS */
+
+.header-src-btn {
+  display: inline-block;
+  position: relative;
+  padding-right: 30px;
+}
+
+.header-src-btn::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -55px;
+  width: 2px;
+  height: 70px;
+  background: #ddd;
+}
+
+.header-contact-btc {
+  float: right;
+}
+
+.search-box-btn.search-box-outer {
+  position: absolute;
+  bottom: 4px;
+  right: 35px;
+}
+
+.header-contact {
+  display: inline-block;
+}
+
+.header-contact-icon {
+  display: inline-block;
+}
+
+.header-contact-text {
+  display: inline-block;
+}
+
+.header-contact-icon {
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+
+.header-contact-text p {
+  font-size: 18px;
+  color: #0e1317;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.header-contact-text span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6d7a8e;
+}
+
+.header-contact-icon img {
+  margin-top: -30px;
+}
+
+.sticky .search-box-btn.search-box-outer i {
+  color: #fff;
+}
+
+.sticky .header-contact-text p {
+  color: #fff;
+}
+
+/* Style Two */
+
+.prygo_nav_manu.style-two {
+  padding: 0 100px;
+  position: relative;
+  margin-bottom: -100px;
+  border-bottom: 1px solid #3c4e68;
+  z-index: 4;
+}
+
+.prygo_nav_manu.style-two:before {
+  height: 110%;
+  width: 24%;
+  background: #ffda2b;
+  clip-path: inherit;
+  z-index: 1;
+}
+
+.prygo_nav_manu.style-two.inner-page:before {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+}
+
+.prygo_nav_manu.style-two .logo {
+  position: inherit;
+  margin-top: 0;
+  z-index: 1;
+}
+
+.prygo_nav_manu.style-two .prygo_menu > ul > li > a {
+  color: #fff;
+  margin: 32px 10px 30px;
+}
+
+.prygo_nav_manu.style-two .header-src-btn {
+  padding-right: 0;
+}
+
+.prygo_nav_manu.style-two .search-box-btn.search-box-outer {
+  position: inherit;
+  bottom: inherit;
+  right: inherit;
+  margin-left: 15px;
+}
+
+.prygo_nav_manu.style-two .search-box-btn.search-box-outer i {
+  color: #fff;
+}
+
+.prygo_nav_manu.style-two .header-src-btn::before {
+  display: none;
+}
+
+.prygo_nav_manu.style-two .header-contact-text span {
+  color: #ffda2b;
+}
+
+.prygo_nav_manu.style-two .header-contact-text p {
+  color: #fff;
+}
+
+.prygo_nav_manu.style-two .header-contact-btc {
+  position: relative;
+}
+
+.prygo_nav_manu.style-two .header-contact-btc::before {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: -17px;
+  height: 155%;
+  width: 1px;
+  background: #3c4e68;
+}
+
+.prygo_nav_manu.style-two.inner-page .header-contact-text span {
+  color: #6d7a8e;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Slider Area Css -->
+<!-- ============================================================== -->*/
+
+.banner-area {
+  background: url(/static/frontend/assets/images/slider/banner1.jpg);
+  /* background: url(/static/frontend/assets/images/slider/banner1.jpg); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1000px;
+  position: relative;
+}
+
+.banner-title h1 {
+  font-size: 110px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  line-height: 110px;
+}
+
+.banner-sub-title {
+  padding-bottom: 20px;
+}
+
+.banner-sub-title h5 {
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+  padding-left: 8px;
+}
+
+.banner-sub-title h5:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -6px;
+  width: 25px;
+  height: 30px;
+  background: #f02830;
+  z-index: -1;
+}
+
+.banner-text {
+  padding: 35px 0 42px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  color: #fff;
+  width: 58%;
+}
+
+.button a {
+  color: #fff;
+  padding: 20px 41px;
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.button a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.button a i {
+  margin-left: 8px;
+  font-weight: 800;
+}
+
+.button a:hover:before {
+  background: linear-gradient(to right, #ff5e14 6%, #f02830 96%);
+}
+
+/* Button Style Two */
+
+.button.two a {
+  background: #00aff5;
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+  padding: 15px 35px;
+  margin: 0 12px;
+  border-radius: 3px;
+}
+
+.button.two a.active {
+  background: #ffda2b;
+  color: #0e1317;
+}
+
+.button.two a:before {
+  width: 0%;
+  background: #ffda2b;
+  border-radius: 3px;
+}
+
+.button.two a.active:before {
+  background: #00aff5;
+}
+
+.button.two a:hover:before {
+  width: 100%;
+}
+
+.button.two a:hover {
+  color: #0e1317;
+}
+
+.button.two a.active:hover {
+  color: #fff;
+}
+
+/* Slider Area CSS */
+
+.slider-area {
+  background: url(assets/images/slider/slider1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 900px;
+  position: relative;
+}
+
+.slider-content {
+  text-align: center;
+  margin-top: 110px;
+}
+
+.slider-sp-title {
+  position: relative;
+  z-index: 1;
+}
+
+.slider-sp-title h1 {
+  color: transparent !important;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+  font-size: 300px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -160px;
+  opacity: 0.2;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.slider-title h1 {
+  font-size: 95px;
+  color: #fff;
+  margin: 0;
+}
+
+.slider-sub-title h5 {
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+  padding-left: 8px;
+  display: inline-block;
+}
+
+.slider-sub-title h5:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -6px;
+  width: 25px;
+  height: 30px;
+  background: #00aff5;
+  z-index: -1;
+}
+
+.slider-button {
+  margin-top: 54px;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Breadcumb Area Css -->
+<!-- ============================================================== -->*/
+
+.breadcumb-area {
+  background: url(assets/images/slider/slider1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 200px 0 115px;
+}
+
+.breadcumb-content {
+  text-align: center;
+}
+
+.breadcumb-title h1 {
+  font-size: 90px;
+  color: #fff;
+}
+
+.breadcumb-content-menu {
+  padding-top: 10px;
+}
+
+.breadcumb-content-menu ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.breadcumb-content-menu ul li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.breadcumb-content-menu ul li a i {
+  margin-left: 10px;
+}
+
+.breadcumb-content-menu ul li span {
+  color: #f02830;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Featrue Area Css -->
+<!-- ============================================================== -->*/
+
+.row.fcr-tp {
+  background: #f3f3f5;
+  padding: 50px 30px 20px;
+  border-radius: 3px;
+  position: relative;
+  margin-top: -125px;
+  z-index: 1;
+}
+
+.single-feature {
+  background: #fff;
+  padding: 32px 30px 44px;
+  margin-bottom: 30px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+.single-feature::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: url(assets/images/resource/fc1.png);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.feature-icon {
+  float: left;
+  margin-right: 28px;
+  margin-top: 4px;
+}
+
+.feature-icon i {
+  font-size: 36px;
+  background: #f3f3f5;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  text-align: center;
+  border: 4px solid #e7e9ec;
+  line-height: 74px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.feature-title h2 {
+  font-size: 22px;
+}
+
+/* Feature Hover CSS */
+
+.single-feature:hover::before {
+  width: 100%;
+}
+
+.single-feature:hover .feature-title h2 {
+  color: #fff;
+}
+
+.single-feature:hover .feature-icon i {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  border-color: #fff;
+  color: #fff;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Section Title Css -->
+<!-- ============================================================== -->*/
+
+.section-title {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title h1 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.section-title h5 {
+  font-size: 16px;
+  color: #0e1317;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  letter-spacing: 1px;
+  padding-left: 8px;
+  margin-bottom: 15px;
+}
+
+.section-title h5:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -6px;
+  width: 25px;
+  height: 30px;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+}
+
+h2.shape-title {
+  color: transparent !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0e1317;
+  font-size: 120px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -31px;
+  opacity: 0.1;
+  left: 25px;
+  z-index: -1;
+}
+
+.section-title p {
+  padding-top: 24px;
+}
+
+.section-title.text-center {
+  margin-bottom: 62px;
+}
+
+.section-title.text-center h2.shape-title {
+  left: 0;
+  right: 0;
+}
+
+/* Style Two */
+
+.section-title.style-two p {
+  padding-top: 24px;
+  color: #6d7a8e;
+}
+
+.section-title.style-two h5:before {
+  background: #00aff5;
+}
+
+.about-area .section-title h5 {
+  margin-top: 0;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo About Area Css -->
+<!-- ============================================================== -->*/
+
+.about-area {
+  padding: 120px 0 115px;
+}
+
+.about-content {
+  padding-left: 20px;
+}
+
+.about-content-inner {
+  padding-top: 16px;
+}
+
+.about-content-icon i {
+  font-size: 20px;
+  color: #f02830;
+  height: 45px;
+  width: 45px;
+  line-height: 43px;
+  border: 1px solid #f02830;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.about-content-icon {
+  float: left;
+  margin-right: 25px;
+}
+
+.about-content-inner-text {
+  overflow: hidden;
+}
+
+.about-content-inner-text p {
+  width: 90%;
+}
+
+.about-content-inner-text h3 {
+  font-size: 18px;
+  padding-bottom: 10px;
+  margin-top: 4px;
+}
+
+.about-button {
+  padding-top: 32px;
+}
+
+/* Style Two */
+
+.about-content-thumb {
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.style-two .about-thumb img {
+  width: 100%;
+  margin-left: -25px;
+}
+
+.about-content-inner-text p {
+  color: #6d7a8e;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Service Area Css -->
+<!-- ============================================================== -->*/
+
+.service-area {
+  background: url(assets/images/resource/sr-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 115px 0 110px;
+}
+
+.single-service {
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.service-thumb {
+  position: relative;
+}
+
+.service-thumb:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.single-service:hover .service-thumb:before {
+  width: 100%;
+}
+
+.service-content {
+  text-align: center;
+  padding: 0 38px 37px;
+}
+
+.service-content-icon {
+  position: relative;
+  margin-top: -44px;
+}
+
+.service-content-icon i {
+  font-size: 40px;
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  line-height: 90px;
+  color: #fff;
+  border: 4px solid #fff;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+.service-content-icon i:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.service-content-inner h2 {
+  font-size: 24px;
+  padding-top: 12px;
+}
+
+.service-content-inner p {
+  line-height: 26px;
+  padding-top: 14px;
+}
+
+.service-content-button {
+  padding-top: 15px;
+}
+
+.service-content-button a {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid #f02830;
+  display: block;
+  padding: 9px 20px;
+  color: #f02830;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.service-content-button a i {
+  margin-left: 10px;
+}
+
+.service-content-button a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.single-service:hover .service-content-button a {
+  color: #fff;
+}
+
+.single-service:hover .service-content-button a:before {
+  width: 100%;
+}
+
+.single-service:hover .service-content-icon i:after {
+  background: #287ff5;
+}
+
+.owl-dots {
+  text-align: center;
+  padding: 18px 0 0;
+}
+
+.owl-dot {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.owl-dot.active {
+  display: inline-block;
+  border: 2px solid #f00;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.owl-dot.active span {
+  border-radius: 50%;
+  background-color: #f02830;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  border: 2px solid #fff;
+  width: 14px;
+  height: 14px;
+}
+
+.owl-dot span {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #f02830;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+}
+
+/* Service Style Two */
+
+.service-area.style-two {
+  background: url(assets/images/resource/sr-bg2.jpg);
+  padding: 115px 0 370px;
+}
+
+.style-two .service-thumb {
+  position: relative;
+}
+
+.style-two .service-content-box {
+  position: absolute;
+  bottom: 20px;
+}
+
+.style-two .service-content-icon {
+  position: absolute;
+  left: 50px;
+  top: -8px;
+  z-index: 2;
+}
+
+.style-two .service-content-icon i {
+  border-radius: 50%;
+  font-size: 45px;
+  line-height: 94px;
+}
+
+.style-two .service-content-icon i:after {
+  background: #00aff5;
+  border-radius: 50%;
+}
+
+.style-two .service-content-inner {
+  background: #fff;
+  margin: 0 20px;
+  padding: 30px 30px 12px;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 101%);
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+.style-two .service-content-inner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #00aff5;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.style-two .service-content-inner h2 {
+  transition: 0.5s;
+}
+
+.style-two .service-content-inner p {
+  width: 90%;
+  transition: 0.5s;
+  padding-top: 12px;
+}
+
+.style-two .service-sp-title {
+  color: transparent !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0e1317;
+  font-size: 120px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -16px;
+  opacity: 0.1;
+  font-size: 40px !important;
+  right: 112px;
+  z-index: 1;
+}
+
+.style-two .service-content-button {
+  padding-top: 0;
+  position: absolute;
+  right: 18px;
+  bottom: 32px;
+}
+
+.style-two .service-content-button a {
+  display: inline-block;
+  background: #ffda2b;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: transparent;
+  color: #0e1317;
+}
+
+.style-two .service-content-button a:before {
+  display: none;
+}
+
+.style-two .service-content-button a i {
+  margin-left: 0;
+}
+
+.style-two .single-service:hover .service-content-button a {
+  color: #0e1317;
+}
+
+.style-two .single-service:hover .service-content-icon i:after {
+  background: #ffda2b;
+}
+
+.style-two .single-service:hover .service-content-inner::before {
+  width: 100%;
+}
+
+.style-two .single-service:hover .service-content-inner h2,
+.style-two .single-service:hover .service-content-inner p {
+  color: #fff;
+}
+
+/* Style Three */
+
+.service-area.style-two.three {
+  padding: 115px 0 90px;
+}
+
+.style-two.three .service-content-inner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.style-two.three .single-service:hover .service-content-icon i:after {
+  background: #fff;
+}
+
+.style-two.three .single-service:hover .service-content-icon i {
+  border-color: #287ff5;
+  color: #f02830;
+}
+
+.style-two.three .service-content-button a {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  color: #fff;
+}
+
+.style-two.three .single-service:hover .service-content-button a {
+  background: #287ff5;
+  color: #fff;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Service Details Area Css -->
+<!-- ============================================================== -->*/
+
+.service-detials-area {
+  padding: 120px 0 90px;
+}
+
+/*widget search*/
+
+.widget_search {
+  padding: 30px 30px 30px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background: #fff;
+  box-shadow: 0px 0px 70px rgb(0 0 0 / 5%);
+}
+
+.service-detials-area .widget_search {
+  background: #f5f5f5;
+  box-shadow: none;
+}
+
+.widget_search form {
+  position: relative;
+}
+
+.widget_search input {
+  border-radius: 4px;
+  padding-left: 20px;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  color: #0d0e14;
+  border: 0;
+  border: 2px solid #9da7b3;
+}
+
+button.icons {
+  border: 0;
+  font-size: 18px;
+  color: #fff;
+  padding: 1px 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60px;
+  width: 60px;
+  background: #ff3c00;
+  border-radius: 0 4px 4px 0;
+}
+
+/*widget categories box*/
+
+.service-detials-area .widget-categories-box {
+  background: #f5f5f5;
+  padding: 42px 40px 25px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: none;
+}
+
+.widget-categories-box {
+  background: #fff;
+  padding: 42px 40px 25px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 70px rgb(0 0 0 / 5%);
+}
+
+/*title*/
+
+.categories-title h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  border-bottom: 2px solid #e9e9ea;
+  padding: 0px 0 15px;
+  margin: 0 0 30px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.categories-title h4:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 24px;
+  width: 3px;
+  background: #ff3c00;
+}
+
+/*categories menu*/
+
+.widget-categories-menu ul {
+  display: block;
+}
+
+.widget-categories-menu ul li {
+  display: block;
+  list-style: none;
+  margin-bottom: 15px;
+  background: transparent;
+  padding: 16px 20px 16px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 2px solid #ced3d9;
+  position: relative;
+  z-index: 1;
+}
+
+.widget-categories-menu ul li:hover {
+  border: 2px solid #f02830;
+}
+
+.widget-categories-menu ul li:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.widget-categories-menu ul li:hover:before {
+  width: 100%;
+}
+
+.widget-categories-menu ul li a {
+  display: block;
+  color: #0d0e14;
+  transition: 0.5s;
+}
+
+.widget-categories-menu ul li a span {
+  display: inline-block;
+  float: right;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  height: 22px;
+  width: 22px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 6px;
+  color: #fff;
+  line-height: 22px;
+  transition: 0.5s;
+}
+
+.widget-categories-menu ul li:hover a span {
+  background: #fff;
+  color: #0e1317;
+}
+
+.widget-categories-menu ul li:hover a {
+  color: #fff;
+}
+
+.pdf-button a {
+  display: block;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  padding: 15px 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.pdf-button a i {
+  float: right;
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+/* Sidber Recent Post */
+
+.sidber-widget-recent-post {
+  margin-bottom: 20px;
+  background: #f3f3f5;
+  overflow: hidden;
+}
+
+.sidber-widget-recent-post .recent-widget-content {
+  padding-top: 20px;
+}
+
+.sidber-widget-recent-post .recent-widget-content a {
+  color: #0e1317;
+  font-size: 18px;
+}
+
+.sidber-widget-recent-post .recent-widget-content span i {
+  margin-right: 7px;
+  color: #f02830;
+}
+
+/* Sidber Achivement CSS */
+
+.widget-achivement ul li {
+  list-style: none;
+  margin-bottom: 6px;
+}
+
+.widget-achivement ul li a i {
+  font-size: 17px;
+  margin-right: 3px;
+}
+
+.widget-achivement ul li a {
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.widget-achivement ul li a span {
+  float: right;
+}
+
+.widget-achivement ul li a:hover {
+  color: #f02830;
+}
+
+/* Sidber Widget Gallery CSS */
+
+.widget-gallery {
+  overflow: hidden;
+}
+
+.widget-gallery-thumb {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Sidber Widget Tags CSS */
+
+.widget-tags a {
+  display: inline-block;
+  border: 2px solid #9da7b3;
+  padding: 3px 20px;
+  margin: 4px 3px;
+  border-radius: 2px;
+  color: #0e1317;
+  font-weight: 500;
+  position: relative;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.widget-tags a:before {
+  position: absolute;
+  content: "";
+  left: -2px;
+  top: 0px;
+  height: 102%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.widget-tags a:hover {
+  color: #fff;
+  border-color: #f02830;
+}
+
+.widget-tags a:hover:before {
+  width: 102%;
+}
+
+/* Service Details Content CSS */
+
+.service-details-main-title {
+  padding: 20px 0 18px;
+}
+
+.service-details-main-title h1 {
+  font-size: 36px;
+}
+
+.service-details-video-thumb {
+  position: relative;
+  padding-top: 20px;
+}
+
+.service-details-overview-title {
+  padding: 22px 0 15px;
+}
+
+.service-details-overview-title h2 {
+  font-size: 30px;
+}
+
+.service-details-overview-list ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+.service-details-overview-list ul li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 9px;
+  height: 12px;
+  width: 12px;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  border-radius: 50%;
+}
+
+.service-details-choose-us {
+  padding-bottom: 10px;
+}
+
+.service-details-choose-us-title {
+  padding: 5px 0 15px;
+}
+
+.service-details-choose-us-title h2 {
+  font-size: 30px;
+}
+
+.service-details-box {
+  background: #f3f3f5;
+  padding: 30px 30px 10px;
+  margin-bottom: 30px;
+}
+
+.service-details-number {
+  position: absolute;
+  right: 60px;
+}
+
+.service-details-number h2 {
+  font-size: 48px;
+  text-transform: none;
+  margin: 0;
+  margin: 0;
+  color: transparent !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0e1317;
+  opacity: 0.5;
+}
+
+.service-details-icon i {
+  font-size: 50px;
+  color: #f02830;
+}
+
+.service-details-content h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.service-details-thumb img {
+  width: 100%;
+}
+
+.service-details-video-thumb-inner img {
+  width: 100%;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Video Area Css -->
+<!-- ============================================================== -->*/
+
+.video-area {
+  background: url(assets/images/resource/video-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 105px 0 385px;
+}
+
+.video-button {
+  padding-top: 42px;
+}
+
+.video-icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  padding-top: 8px;
+}
+
+.video-icon a {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100%;
+  position: relative;
+  color: #0e1317;
+  -webkit-animation: ripple-white 1s linear infinite;
+  animation: ripple-blue 1s linear infinite;
+  -webkit-transition: 0.5s;
+  background: #fff;
+  font-size: 25px;
+  z-index: 1;
+}
+
+/* Video Style Two */
+
+.video-area.style-two {
+  background: url(assets/images/resource/video-bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 105px 0 435px;
+}
+
+.video-area.style-two .pr-video .video-icon {
+  bottom: -110px;
+  top: inherit;
+}
+
+@-webkit-keyframes ripple-blue {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
+      0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
+      0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes ripple-blue {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
+      0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
+      0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+  }
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Why Choose Us Area Css -->
+<!-- ============================================================== -->*/
+
+.why-choose-us-area {
+  padding: 0 100px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.why-choose-us-area:before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  height: 56%;
+  width: 100%;
+  background: url(assets/images/resource/howit.jpg);
+  z-index: -1;
+}
+
+.row.upper-bx {
+  background: #fff;
+  padding: 30px 40px 30px 18px;
+  position: relative;
+  margin-top: -250px;
+}
+
+.choose-us-thumb img {
+  width: 100%;
+}
+
+.icon-box {
+  padding-right: 30px;
+}
+
+.icon-box-icon {
+  float: left;
+  margin-right: 20px;
+  margin-top: 18px;
+}
+
+.icon-box-icon i {
+  font-size: 48px;
+  color: #f02830;
+}
+
+.icon-box-content {
+  overflow: hidden;
+}
+
+.icon-box-content h2 {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo How IT Work Area Css -->
+<!-- ============================================================== -->*/
+
+.how-it-work-area {
+  background: url(assets/images/resource/howit.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 115px 0 82px;
+}
+
+.row.it-shape {
+  position: relative;
+  padding-top: 40px;
+}
+
+.row.it-shape:after {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 162px;
+  background: url(assets/images/resource/sp.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 10%;
+  margin: auto;
+}
+
+.single-how-it-work {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.how-it-work-icon i {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  line-height: 172px;
+  background: #f5cfcc;
+  font-size: 80px;
+  color: #f02830;
+  border-radius: 100px 100px 100px 0;
+  transition: 0.5s;
+}
+
+.how-it-work-content h2 {
+  font-size: 22px;
+  padding: 15px 0 12px;
+}
+
+.single-how-it-work:hover .how-it-work-icon i {
+  background: #ff3c00;
+  color: #fff;
+}
+/*
+<!-- ============================================================== -->
+<!-- Prygo Portfolio Area Css -->
+<!-- ============================================================== -->*/
+
+.portfolio-area {
+  padding: 115px 0 0;
+}
+
+.portfolio-area.style-three {
+  padding: 115px 0 90px;
+}
+
+.row.port-bt {
+  position: relative;
+  margin-bottom: -120px;
+}
+
+.single-portfolio {
+  margin-bottom: 30px;
+}
+
+.portfolio-thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-thumb:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 7, 15, 0.16) 0%, #00070f 100%);
+  transition: 0.5s;
+}
+
+.portfolio-thumb img {
+  width: 100%;
+}
+
+.portfolio-content {
+  position: absolute;
+  bottom: 0;
+  padding: 0 40px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.portfolio-area.style-three .portfolio-content {
+  padding: 0 30px;
+}
+
+.portfolio-content span a {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #fff;
+}
+
+.portfolio-content h2 {
+  font-size: 24px;
+  padding: 14px 0 10px;
+}
+
+.portfolio-content h2 a {
+  font-weight: 800;
+  color: #fff;
+}
+
+.portfolio-content p {
+  color: #fff;
+}
+
+.single-portfolio:hover .portfolio-thumb:before {
+  height: 100%;
+}
+
+.single-portfolio:hover .portfolio-content {
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* Style Two */
+
+.portfolio-area.style-two {
+  padding: 0 0 0 120px;
+}
+
+.portfolio-area .row.prts-bgt {
+  background: url(assets/images/resource/prts-bg.jpg);
+  padding: 116px 0 90px 100px;
+  position: relative;
+  margin-top: -320px;
+}
+
+.style-two .portfolio-content span a {
+  background: #ffda2b;
+  color: #0e1317;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Portfolio Details Area Css -->
+<!-- ============================================================== -->*/
+
+.portfolio-detials-area {
+  padding: 95px 0 100px;
+}
+
+.portfolio-details-main-title {
+  padding: 0 0 18px;
+}
+
+.portfolio-details-text {
+  padding-bottom: 1px;
+}
+
+.portfolio-details-overview-title {
+  padding: 22px 0 15px;
+}
+
+.portfolio-details-overview-title h2 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.portfolio-details-overview-list ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+.portfolio-details-overview-list ul li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 9px;
+  height: 12px;
+  width: 12px;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  border-radius: 50%;
+}
+
+.portfolio-details-thumb img {
+  width: 100%;
+}
+
+.portfolio-details-thumb {
+  margin-top: 20px;
+}
+
+.portfolio-details-clients-title {
+  padding-bottom: 10px;
+}
+
+.portfolio-details-clients-title h2 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Testimonial Area Css -->
+<!-- ============================================================== -->*/
+
+.testimonial-area {
+  background: url(assets/images/resource/test-bg.jpg);
+  padding: 210px 0 120px;
+}
+
+.testimonial-area.style-two {
+  padding: 120px 0 120px;
+}
+
+.single-testimonial {
+  background: #fff;
+  text-align: center;
+  padding: 50px 10px 28px;
+}
+
+.testimonial-thumb img {
+  text-align: center !important;
+  display: inline-block !important;
+}
+
+.testimonial-content h2 {
+  font-size: 22px;
+  padding-top: 20px;
+}
+
+.testimonial-content span {
+  color: #f02830;
+  font-weight: 500;
+}
+
+.testimonial-content p {
+  padding-top: 20px;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Pricing Area Css -->
+<!-- ============================================================== -->*/
+
+.pricing-area {
+  padding: 115px 0 90px;
+}
+
+.price-spt-thumb {
+  position: relative;
+}
+
+.price-spt-thumb-inner {
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+  left: 203px;
+  margin: auto;
+}
+
+.single-pricing {
+  box-shadow: 0 2px 4px #0003;
+  margin-bottom: 30px;
+}
+
+.pricing-head-content {
+  background: url(assets/images/resource/pr1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 40px 30px 85px;
+  text-align: center;
+  position: relative;
+}
+
+.single-pricing.two .pricing-head-content {
+  background: url(assets/images/resource/pr3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.pricing-title {
+  margin-bottom: 30px;
+}
+
+.pricing-title h2 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.pricing-tk {
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  border: 8px solid #00aff5;
+  top: 120px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.pricing-tk h2 {
+  font-weight: 800;
+  padding-top: 15px;
+  line-height: 32px;
+}
+
+.pricing-tk span {
+  font-size: 14px;
+  color: #0e1317;
+  font-weight: 700;
+}
+
+.pricing-body {
+  padding: 60px 45px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-body::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: #0e1317;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.pricing-body::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(assets/images/resource/pr-shape1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.pricing-body ul li {
+  padding-bottom: 12px;
+  list-style: none;
+  transition: 0.5s;
+}
+
+.pricing-body ul li span {
+  float: right;
+}
+
+.pricing-body ul li span i {
+  color: #00aff5;
+  font-size: 12px;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #00aff5;
+  display: inline-block;
+  text-align: center;
+  line-height: 23px;
+  border-radius: 50%;
+}
+
+.pricing-button {
+  margin-top: 26px;
+}
+
+.pricing-button a {
+  display: inline-block;
+  padding: 14px 35px;
+  background: #00aff5;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.pricing-button a i {
+  margin-left: 5px;
+}
+
+/* Pricing Hover CSS */
+
+.single-pricing:hover .pricing-body::before {
+  height: 100%;
+}
+
+.single-pricing:hover .pricing-body::after {
+  background: url(assets/images/resource/pr-shape.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.single-pricing:hover .pricing-body ul li {
+  color: #fff;
+}
+
+.single-pricing:hover .pricing-tk {
+  border-color: #ffda2b;
+}
+
+.single-pricing:hover .pricing-button a {
+  background: #ffda2b;
+  color: #0e1317;
+}
+
+/* Pricing Active */
+
+.single-pricing.active .pricing-head-content {
+  background: url(assets/images/resource/pr2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.single-pricing.active .pricing-tk {
+  border: 8px solid #ffda2b;
+}
+
+.single-pricing.active .pricing-button a {
+  background: #ffda2b;
+  color: #0e1317;
+}
+
+.single-pricing.active .pricing-body::before {
+  height: 100%;
+}
+
+.single-pricing.active .pricing-body ul li {
+  color: #fff;
+}
+
+.single-pricing.active .pricing-body::after {
+  background: url(assets/images/resource/pr-shape.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.single-pricing.active:hover .pricing-tk {
+  border: 8px solid #00aff5;
+}
+
+.single-pricing.active:hover .pricing-button a {
+  background: #00aff5;
+  color: #fff;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Skill Area Css -->
+<!-- ============================================================== -->*/
+
+.skill-area {
+  padding: 0 115px 0 0;
+}
+
+.upper-bx.two {
+  background: url(assets/images/resource/skill-bg.jpg);
+  padding: 120px 90px 0 188px;
+  position: relative;
+  margin-top: -250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.appointment-booking {
+  background: #00aff5;
+  padding: 35px 50px 55px;
+  margin-left: 75px;
+}
+
+.appointment-booking-title h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 36px;
+}
+
+.appointment-booking .form_box input {
+  height: 60px;
+  width: 100%;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  outline: 0;
+  border: none;
+  border-radius: 3px;
+}
+
+.appointment-booking select.custom-select {
+  height: 60px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.appointment-booking select.custom-select.slc {
+  width: 48%;
+  float: left;
+}
+
+.appointment-booking select.custom-select.slc.tbs {
+  margin-right: 12px;
+}
+
+.appointment-booking .quote_button {
+  margin-top: 20px;
+}
+
+.appointment-booking .quote_button button {
+  display: inline-block;
+  background: #ffda2b;
+  padding: 15px 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.appointment-booking .quote_button button i {
+  margin-left: 5px;
+}
+
+/* Process Bar CSS */
+
+.prossess-ber-plugin span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0e1317;
+}
+
+.barfiller {
+  width: 100%;
+  height: 8px;
+  position: relative;
+  margin-bottom: 25px;
+  margin-top: 12px;
+  border-radius: 5px;
+  filter: drop-shadow(0px 10px 10px rgba(60, 115, 206, 0.2));
+  background-color: #fff;
+}
+
+.barfiller .fill {
+  display: block;
+  position: relative;
+  width: 0px;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+}
+
+.barfiller .tipWrap {
+  display: none;
+}
+
+.barfiller .tip {
+  font-size: 16px;
+  left: 0px;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+  top: -39px;
+  font-weight: 700;
+  color: #0e1317;
+}
+
+.stat-bar:nth-of-type(1) .stat-bar-rating {
+  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
+}
+
+span.fill {
+  background: #00aff5 !important;
+  border-radius: 5px;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Team Area Css -->
+<!-- ============================================================== -->*/
+
+.team-area {
+  padding: 115px 0 90px;
+}
+
+.single-team {
+  margin-bottom: 30px;
+}
+
+.team-thumb {
+  position: relative;
+}
+
+.team-thumb img {
+  width: 100%;
+}
+
+.team-content {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+  padding: 25px 15px 32px;
+  transition: 0.5s;
+}
+
+.team-content-inner h2 {
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.team-content-inner span {
+  padding-top: 5px;
+  display: inline-block;
+  color: #6d7a8e;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.team-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.team-icon a {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #fff;
+  line-height: 37px;
+  border-radius: 50%;
+  margin: 0 3px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.single-team:hover .team-content {
+  padding: 25px 15px 92px;
+  background: #00aff5;
+}
+
+.single-team:hover .team-icon {
+  bottom: 36px;
+  opacity: 1;
+}
+
+.single-team:hover .team-content-inner h2,
+.single-team:hover .team-content-inner span {
+  color: #fff;
+}
+
+.team-icon a:hover {
+  background: #ffda2b;
+  border-color: #ffda2b;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Counter Area Css -->
+<!-- ============================================================== -->*/
+
+.counter-area {
+  background: url(assets/images/resource/counter-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 120px 0 300px;
+}
+
+.single-counter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.counter-icon i {
+  font-size: 60px;
+  color: #fff;
+}
+
+.counter-content h2 {
+  font-size: 48px;
+  color: #fff;
+  display: inline-block;
+}
+
+.counter-content span {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+}
+
+.counter-content p {
+  color: #e7e9ec;
+  font-weight: 700;
+  padding-top: 2px;
+}
+
+/* Style Two */
+
+.counter-area.style-two {
+  background: #fff;
+  padding: 5px 0 80px;
+}
+
+.counter-area.style-two .counter-content h2 {
+  color: #0e1317;
+}
+
+.counter-area.style-two .counter-content p {
+  color: #3c4e68;
+}
+
+.counter-area.style-two .counter-icon i {
+  color: #f02830;
+}
+
+.counter-area.style-two .counter-content span {
+  color: #0e1317;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Contact Area Css -->
+<!-- ============================================================== -->*/
+
+.row.contact-box {
+  background: #fff;
+  padding: 55px 40px 55px;
+  box-shadow: 0px -20px 70px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin-bottom: -235px;
+  z-index: 1;
+}
+
+.contact-title h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.contact-thumb {
+  margin-right: 40px;
+}
+
+.contact-thumb img {
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border: 2px solid #9da7b3;
+  transition: 0.5s;
+}
+
+.input-box textarea {
+  width: 100%;
+  height: 180px;
+  padding-left: 15px;
+  border: 2px solid #9da7b3;
+  padding-top: 12px;
+  transition: 0.5s;
+}
+
+.input-button button {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  display: inline-block;
+  padding: 14px 40px;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.input-button {
+  padding-top: 20px;
+}
+
+.input-button button i {
+  margin-left: 7px;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+  border-color: #ff3c00;
+  outline: 0;
+  box-shadow: 0 0 6px rgb(204, 48, 0, 0.6);
+}
+
+/* Map Area */
+
+.map-area {
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.map-area .container-fluid {
+  padding: 0;
+}
+
+.map-area iframe {
+  width: 100%;
+  height: 650px;
+}
+
+.row.cnt-bx {
+  position: relative;
+  background: #fff;
+  margin-top: -230px;
+  padding: 30px 15px 20px;
+  filter: drop-shadow(0px 20px 70px rgba(0, 0, 0, 0.05));
+}
+
+.google-map iframe {
+  width: 100%;
+  height: 560px;
+}
+
+.form-box {
+  margin-bottom: 10px;
+}
+
+.form-box input {
+  width: 100%;
+  height: 60px;
+  background: #f3f3f5;
+  outline: 0;
+  border: 0;
+  padding-left: 20px;
+}
+
+.form-box textarea {
+  background: #f3f3f5;
+  border: 0;
+  outline: 0;
+  height: 170px;
+  width: 100%;
+  padding-top: 18px;
+  padding-left: 20px;
+}
+
+.form-button button {
+  display: inline-block;
+  background: #ffda2b;
+  padding: 16px 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+.form-button button i {
+  margin-left: 5px;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Mission Vision Area Css -->
+<!-- ============================================================== -->*/
+
+.mission-vision-area {
+  background: url(assets/images/resource/msvs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 115px 0 65px;
+}
+
+/*tabe*/
+
+.tab {
+  padding-top: 50px;
+  position: relative;
+  left: 10px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabs {
+  display: table;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+.tabs li {
+  float: left;
+  line-height: 38px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.tabs li a {
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  outline: none;
+  padding: 8px 38px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #ff5e14;
+  margin-right: 25px;
+}
+
+.tabs_item {
+  display: none;
+  padding: 30px 0;
+}
+
+.tabs_item:first-child {
+  display: block;
+}
+
+li.current a {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  color: #fff;
+}
+
+.tabs-inner-text p {
+  color: #fff;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Mission Area Css -->
+<!-- ============================================================== -->*/
+
+.mission-area {
+  padding: 115px 0 170px;
+}
+
+.row.mrc-mrgn {
+  margin-top: 90px;
+}
+
+.mission-history-box {
+  background: #f3f3f5;
+  padding: 38px 45px 32px;
+  width: 74%;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.mission-history-box::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  transition: 0.5s;
+}
+
+.mission-history-box:hover:before {
+  width: 100%;
+}
+
+.mission-history-box:after {
+  position: absolute;
+  content: "";
+  right: -11px;
+  top: 76px;
+  height: 22px;
+  width: 22px;
+  background: #f3f3f5;
+  transform: rotate(45deg);
+  transition: 1s;
+  z-index: -1;
+}
+
+.mission-history-right .mission-history-box:after {
+  right: inherit;
+  top: 90px;
+  left: -11px;
+}
+
+.mission-history-right .mission-history-content h2::before {
+  top: -12px;
+  right: -45px;
+  left: inherit;
+}
+
+.mission-history-box:hover:after {
+  background: #ff5e14;
+}
+
+.mission-history-right .mission-history-box:hover:after {
+  background: #f02830;
+}
+
+.mission-history-content h2 {
+  font-size: 22px;
+  position: relative;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.mission-history-content p {
+  transition: 0.5s;
+  position: relative;
+}
+
+.mission-history-years {
+  text-align: right;
+  margin-right: 145px;
+  margin-bottom: 150px;
+}
+
+.mission-history-years h1 {
+  font-size: 36px;
+}
+
+.mission-history-content h2::before {
+  position: absolute;
+  content: "";
+  left: -44px;
+  top: -12px;
+  height: 30px;
+  width: 2px;
+  background: #f00;
+}
+
+.mission-history-box:hover .mission-history-content h2,
+.mission-history-box:hover .mission-history-content p {
+  color: #fff;
+}
+
+/* Mission Right Box CSS */
+
+.mission-history-right {
+  position: relative;
+  padding-left: 70px;
+}
+
+.mission-history-right::before {
+  position: absolute;
+  content: "";
+  left: -65px;
+  top: -57px;
+  height: 110%;
+  width: 100%;
+  background: url(assets/images/resource/line.png);
+  background-repeat: no-repeat;
+}
+
+.mission-history-right .mission-history-years {
+  text-align: left;
+}
+
+.line-button {
+  position: absolute;
+  top: -13%;
+  left: -16%;
+}
+
+.line-button.two {
+  top: inherit;
+  bottom: -82px;
+}
+
+.line-button a {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  border: 1px solid #ff3c00;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  transition: 0.5s;
+}
+
+.line-button a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.line-button a:hover:before {
+  width: 100%;
+}
+
+.line-button a:hover {
+  color: #fff;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Contact Address Area Css -->
+<!-- ============================================================== -->*/
+
+.contact-address-area {
+  padding: 120px 0 90px;
+}
+
+.contact-address-box {
+  margin-left: 65px;
+}
+
+.contact-address-single-box {
+  border: 2px solid #e5e5e5;
+  padding: 30px 35px 30px;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+.contact-address-icon {
+  float: left;
+  margin-right: 30px;
+}
+
+.contact-address-icon i {
+  display: inline-block;
+  background: #f3f3f5;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 45px;
+  color: #f02830;
+  border-radius: 50%;
+}
+
+.contact-address-content h5 {
+  font-size: 16px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.contact-address-content p {
+  margin-bottom: 0;
+  color: #0e1317;
+}
+
+.contact-address-button {
+  padding-top: 40px;
+}
+
+.contact-address-single-box:hover {
+  border: 2px solid #f02830;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Blog Area Css -->
+<!-- ============================================================== -->*/
+
+.blog-area {
+  padding: 115px 0 90px;
+}
+
+.single-blog {
+  background: #fff;
+  box-shadow: 0px 10px 70px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.blog-thumb {
+  position: relative;
+}
+
+.blog-thumb:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.single-blog:hover .blog-thumb:before {
+  width: 100%;
+}
+
+.blog-thumb img {
+  width: 100%;
+}
+
+.blog-meta-date {
+  position: relative;
+  margin-top: -28px;
+  z-index: 1;
+}
+
+.blog-meta-date span {
+  background: #287ff5;
+  display: inline-block;
+  padding: 3px 27px 1px;
+  color: #fff;
+  border-radius: 0 30px 30px 0;
+  font-size: 14px;
+}
+
+.blog-meta-date span i {
+  margin-right: 5px;
+}
+
+.blog-meta span {
+  font-size: 14px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: #0e1317;
+}
+
+.blog-meta span i {
+  color: #f02830;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.blog-content {
+  padding: 20px 35px 38px;
+}
+
+.blog-title h2 {
+  font-size: 24px;
+}
+
+.blog-title h2 a {
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.blog-title h2 a:hover {
+  color: #f02830;
+}
+
+.blog-button {
+  padding-top: 28px;
+}
+
+.blog-button a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid #f02830;
+  display: inline-block;
+  padding: 7px 26px;
+  color: #0e1317;
+  font-family: "Open Sans";
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.blog-button a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -1px;
+  height: 102%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.single-blog:hover .blog-button a:before {
+  width: 101%;
+}
+
+.single-blog:hover .blog-button a {
+  color: #fff;
+}
+
+.blog-button a i {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/* Style Two */
+
+.blog-area.style-two .blog-button a {
+  border: 2px solid #00aff5;
+  background: #00aff5;
+  color: #fff;
+}
+
+.blog-area.style-two .blog-button a:before {
+  background: #ffda2b;
+}
+
+.blog-area.style-two .single-blog:hover .blog-button a {
+  border: 2px solid #ffda2b;
+}
+
+.blog-area.style-two .blog-meta-date span {
+  background: #ffda2b;
+  color: #3c4e68;
+}
+
+.blog-area.style-two .blog-meta span i {
+  color: #00aff5;
+}
+
+.blog-area.style-two .blog-title h2 a:hover {
+  color: #ffda2b;
+}
+
+.blog-area.style-two .owl-nav {
+  position: absolute;
+  bottom: 200px;
+  left: -48%;
+}
+
+.blog-area.style-two .owl-prev i {
+  border: 2px solid #f5f5f5;
+  color: #0e1317;
+  border-radius: 0;
+  background: #f5f5f5;
+  line-height: 60px;
+}
+
+.blog-area.style-two .owl-prev i:after {
+  background: #ffda2b;
+  border-radius: 0;
+}
+
+.blog-area.style-two .owl-next i {
+  background: #ffda2b;
+  border: 2px #ffda2b;
+  border-radius: 0;
+  line-height: 60px;
+  color: #0e1317;
+}
+
+.blog-area.style-two .owl-next i:hover {
+  color: #0e1317;
+}
+
+.blog-area.style-two .owl-prev i:after,
+.blog-area.style-two .owl-next i:after {
+  display: none;
+}
+
+/***
+======================================================
+<--  Prygo Blog Details Area Css -->
+======================================================***/
+
+.blog-detials-area {
+  padding: 100px 0 100px;
+}
+
+.blog-grid-area {
+  padding: 120px 0 90px;
+}
+
+.blog-details-main {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.05);
+}
+
+.blog-details-meta {
+  background: #f3f3f5;
+  padding: 16px 30px;
+}
+
+.blog-details-meta span {
+  margin-right: 30px;
+}
+
+.blog-details-meta span i {
+  color: #f02830;
+  padding-right: 5px;
+}
+
+.blog-details-content {
+  padding: 20px 0 18px;
+}
+
+.blog-details-content h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.blog-details-thumb img {
+  width: 100%;
+}
+
+.blog-details-des {
+  padding: 30px 0 10px;
+}
+
+.blog-details-blockquote {
+  background: rgba(240, 40, 48, 0.1);
+  padding: 40px 38px 26px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.blog-details-blockquote::before {
+  position: absolute;
+  content: "";
+  background: url(assets/images/resource/quite.png);
+  top: 40px;
+  left: 60px;
+  height: 75px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
+
+.blog-details-blockquote blockquote {
+  font-size: 18px;
+  color: #0e1317;
+  font-weight: 500;
+  font-family: "Open Sans";
+}
+
+.blog-details-video-thumb {
+  margin-top: 30px;
+}
+
+.blog-details-video-thumb img {
+  width: 100%;
+}
+
+.blog-details-video-thumb-inner img {
+  width: 100%;
+}
+
+.blog-details-content h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.blog-details-content-list p i {
+  font-size: 14px;
+  height: 32px;
+  width: 32px;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.blog-detials-area .blog-content {
+  padding: 20px 30px 38px;
+}
+
+.blog-details-button a {
+  display: inline-block;
+  border: 2px solid #f02830;
+  padding: 3px 20px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.blog-details-button a:before {
+  position: absolute;
+  content: "";
+  left: -2px;
+  top: -1px;
+  height: 104%;
+  width: 104%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.blog-details-button a.active {
+  border-color: #9da7b3;
+  background: transparent;
+  color: #0e1317;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+
+.blog-details-button a.active:before {
+  background: transparent;
+}
+
+.blog-details-button a.active:hover:before {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+}
+
+.blog-details-button a.active:hover {
+  color: #fff;
+  border-color: #f02830;
+}
+
+.blog-details-social {
+  text-align: right;
+}
+
+.blog-details-social a {
+  display: inline-block;
+  border: 2px solid #9da7b3;
+  height: 40px;
+  width: 40px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 14px;
+  transition: 0.5s;
+  margin-left: 5px;
+}
+
+.blog-details-social a:hover {
+  background: #287ff5;
+  border-color: #287ff5;
+  color: #fff;
+}
+
+/* Blog Details Author */
+
+.blog-details-author {
+  border-top: 2px solid #ced3d9;
+  padding-top: 40px;
+  margin-top: 32px;
+}
+
+.blog-details-author-inner {
+  background: #f3f3f5;
+  padding: 30px 30px 25px;
+}
+
+.blog-details-author-thumb {
+  float: left;
+  margin-right: 30px;
+}
+
+.blog-details-author-content h2 {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Comment CSS */
+
+.blog-details-comment {
+  margin-bottom: 10px;
+}
+
+.blog-details-comment-thumb {
+  float: left;
+  margin-right: 30px;
+}
+
+.blog-details-comment-content {
+  overflow: hidden;
+}
+
+.blog-details-comment-content h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.blog-details-comment-content span {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.blog-details-comment-reply {
+  position: absolute;
+  right: 25px;
+}
+
+.blog-details-comment-reply a {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  padding: 3px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.blog-details-comment.reply {
+  margin-left: 70px;
+  padding-top: 35px;
+  border-top: 2px solid #9da7b3;
+}
+
+/* Blog Details Contact */
+
+.blog-details-contact {
+  border-top: 2px solid #9da7b3;
+  margin: 12px 20px 10px;
+  padding-top: 8px;
+}
+
+/*progress bar*/
+
+.progress-box {
+  width: 600px;
+  margin: 35px auto 0 0px;
+  font-family: "Fira Sans";
+}
+
+.circle_percent {
+  font-size: 90px;
+  width: 87px;
+  height: 87px;
+  position: relative;
+  background: #ffeae3;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 20px 0 0;
+  z-index: 1;
+}
+
+.circle_inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  clip: rect(0 1em 1em 0.5em);
+}
+.round_per {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  background: #ff3c00;
+  clip: rect(0 1em 1em 0.5em);
+  transform: rotate(180deg);
+  transition: 1.05s;
+}
+.percent_more .circle_inner {
+  clip: rect(0 0.5em 1em 0em);
+}
+.percent_more:after {
+  position: absolute;
+  left: 0.5em;
+  top: 0em;
+  right: 0;
+  bottom: 0;
+  background: #ff3c00;
+  content: "";
+}
+.circle_inbox {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.percent_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 22px;
+  line-height: 26px;
+  color: #232323;
+  text-align: center;
+}
+
+/*circle progress title*/
+
+.extra-progress {
+  display: inline-block;
+  padding: 0 0 0 70px;
+}
+
+.circle-progress-title {
+  display: inline-block;
+}
+
+.circle-progress-title h4 {
+  font-size: 18px;
+  line-height: 28px;
+  color: #232323;
+  font-weight: 500;
+  position: relative;
+  top: -30px;
+}
+
+/***
+======================================================
+<--  Prygo Case Study Area Css -->
+======================================================***/
+
+/* Portfolio Nav */
+.portfolio_nav {
+  margin-bottom: 40px;
+}
+
+.portfolio_menu ul {
+  text-align: center;
+  list-style: none;
+}
+
+.portfolio_nav ul li {
+  background: #f6f5f5;
+  font-size: 15px;
+  font-family: "Fira Sans";
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  padding: 6px 25px;
+  font-weight: 500;
+  position: relative;
+  margin: 0 3px;
+  margin-bottom: 7px;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.portfolio_menu ul li a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s;
+}
+
+.portfolio_menu ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 24px;
+  height: 2px;
+  width: 0%;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.portfolio_nav ul li:hover,
+.portfolio_nav ul li.current_menu_item {
+  color: #fff;
+  background: #ff3c00;
+}
+
+/***======================================================
+<-- Prygo Faq Area Css -->
+======================================================***/
+
+.video-icon {
+  display: inline-block;
+}
+
+.video-icon-cda a {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 100%;
+  color: #ff3c00;
+  background: #fff;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  -webkit-animation: hassan 1s linear infinite;
+  animation: hassan 1.5s linear infinite;
+  -webkit-transition: 0.5s;
+  font-size: 28px;
+  z-index: 1;
+}
+
+@-webkit-keyframes hassan {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4),
+      0 0 0 5px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4),
+      0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 0 40px rgba(255, 255, 255, 0);
+  }
+}
+@keyframes hassan {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4),
+      0 0 0 5px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4),
+      0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4),
+      0 0 0 40px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4),
+      0 0 0 40px rgba(255, 255, 255, 0);
+  }
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo News Letter Area CSS -->
+<!-- ============================================================== -->*/
+
+.newsletter-area {
+  padding: 0 0 0 397px;
+}
+
+.newsletter-area.style-two {
+  padding: 0;
+}
+
+.newsletter-area.style-three {
+  background: #287ff5;
+  padding: 65px 0;
+  position: relative;
+  margin-bottom: -80px;
+}
+
+.newsletter-area .nsbg {
+  background: url(assets/images/resource/ns-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  padding: 80px 235px 80px 30px;
+  position: relative;
+  margin-bottom: -90px;
+}
+
+.newsletter-area.style-two .row.nsbg {
+  padding: 80px 0 80px 30px;
+}
+
+.newsletter-title h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.newsletter-form input {
+  width: 70%;
+  height: 60px;
+  outline: 0;
+  padding-left: 20px;
+  border: 0;
+}
+
+.newsletter-form button {
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  border: 0;
+  height: 60px;
+  padding: 0 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  right: 158px;
+}
+
+.newsletter-area.home-two.style-two .newsletter-form button {
+  background: #ffda2b;
+  color: #0e1317;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Footer Area CSS -->
+<!-- ============================================================== -->*/
+
+.footer-area {
+  padding: 190px 0 10px;
+  background: url(assets/images/resource/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer-area.two {
+  padding: 115px 0 10px;
+}
+
+.widget-title {
+  padding-bottom: 46px;
+}
+
+.widget-title h2 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-widget-logo {
+  margin-top: 6px;
+}
+
+.footer-widget-text {
+  padding-top: 38px;
+}
+
+.footer-widget-text p {
+  color: #e6e7e8;
+  width: 96%;
+}
+
+.footer-widget-social {
+  padding-top: 20px;
+}
+
+.footer-widget-social a {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  line-height: 38px;
+  border-radius: 50%;
+  margin-right: 8px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.footer-widget-social a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.footer-widget-social a:hover:before {
+  width: 100%;
+}
+
+.footer-widget-social a:hover {
+  border-color: transparent;
+}
+
+/* Recent Post CSS */
+
+.footer-widget-recent-post {
+  margin-bottom: 25px;
+}
+
+.recent-widget-thumb {
+  float: left;
+  margin-right: 25px;
+}
+
+.recent-widget-content a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: "Open Sans";
+  display: block;
+  line-height: 26px;
+  transition: 0.5s;
+}
+
+.recent-widget-content span {
+  font-size: 14px;
+  color: #9da7b3;
+  padding-top: 7px;
+  display: block;
+}
+
+.recent-widget-content span i {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.recent-widget-content a:hover {
+  color: #f02830;
+}
+
+/* Footer Menu CSS */
+
+.footer-menu {
+  float: left;
+  margin-right: 70px;
+}
+
+.footer-menu.two {
+  margin-right: 0;
+}
+
+.footer-menu ul li {
+  list-style: none;
+  margin-bottom: 14px;
+  transition: 0.5s;
+}
+
+.footer-menu ul li a {
+  color: #9da7b3;
+  font-size: 16px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.footer-menu ul li a:hover {
+  color: #f02830;
+}
+
+.coppy-right-text {
+  padding-top: 26px;
+  border-top: 1px solid #524f4f;
+  margin-top: 50px;
+}
+
+.coppy-right-text p {
+  text-align: center;
+  color: #fff;
+}
+
+/* Home Two CSS */
+
+.footer-area.home-two .recent-widget-content a:hover {
+  color: #00aff5;
+}
+
+.footer-area.home-two .footer-menu ul li a:hover {
+  color: #00aff5;
+}
+
+.footer-area.home-two .footer-widget-social a:before {
+  background: #00aff5;
+}
+
+/*
+<!-- ============================================================== -->
+<!-- Prygo Scrollup Section -->
+<!-- ============================================================== -->*/
+
+.scroll-area {
+  position: relative;
+  z-index: 999;
+}
+
+.scroll-area .go-top {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  right: 30px;
+  color: #ffffff;
+  background-image: -moz-linear-gradient(0deg, #d1651a 0%, #c1282a 100%);
+  background-image: -webkit-linear-gradient(0deg, #d1651a 0%, #c1282a 100%);
+  z-index: 9999;
+  width: 45px;
+  text-align: center;
+  height: 45px;
+  line-height: 42px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.9s ease-out 0s;
+  -moz-transition: all 0.9s ease-out 0s;
+  border-radius: 10px;
+}
+
+.scroll-area .go-top i {
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  right: 0;
+  margin: 0 auto;
+  font-size: 15px;
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+}
+
+.scroll-area .go-top i:last-child {
+  opacity: 0;
+  visibility: hidden;
+  top: 60%;
+}
+
+.scroll-area .go-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(to right, #00132b 0%, #00132b 100%);
+  background-image: -ms-linear-gradient(0deg, #d1651a 0%, #c1282a 100%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  border-radius: 100%;
+}
+
+.scroll-area .go-top:focus,
+.scroll-area .go-top:hover {
+  color: #fff;
+}
+
+.scroll-area .go-top:focus::before,
+.scroll-area .go-top:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-area .go-top:focus i:first-child,
+.scroll-area .go-top:hover i:first-child {
+  opacity: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.scroll-area .go-top:focus i:last-child,
+.scroll-area .go-top:hover i:last-child {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+
+.scroll-area .go-top.active {
+  top: 95%;
+  -webkit-transform: translateY(-98%);
+  -moz-transform: translateY(-98%);
+  opacity: 1;
+  visibility: visible;
+  border-radius: 0;
+  right: 30px;
+  border-radius: 100%;
+}
+
+.top-wrap {
+  position: relative;
+}
+
+.top-wrap .go-top-button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  top: 3px;
+  z-index: 1;
+  background: #ff3c00;
+}
+
+.top-wrap .go-top-button i {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 4px;
+  color: #fff;
+}
+
+.top-wrap .go-top-button::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 45px;
+  height: 45px;
+  -webkit-animation: ripple 1.6s ease-out infinite;
+  -moz-animation: ripple 1.6s ease-out infinite;
+  opacity: 0;
+  background-image: -moz-linear-gradient(0deg, #f02830 0%, #f02830 100%);
+  background-image: -webkit-linear-gradient(0deg, #f02830 0%, #f02830 100%);
+  border-radius: 100%;
+}
+
+.top-wrap .go-top-button:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.scroll-area.home-two .top-wrap .go-top-button {
+  background: #00aff5;
+}
+.scroll-area.home-two .top-wrap .go-top-button::after {
+  background-image: -moz-linear-gradient(0deg, #00aff5 0%, #00aff5 100%);
+  background-image: -webkit-linear-gradient(0deg, #00aff5 0%, #00aff5 100%);
+}
+
+@keyframes ripple {
+  0%,
+  35% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+/*==========================================
+    Prygo Search Popup Css
+=========================================*/
+
+.search-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99999;
+  margin-top: -540px;
+  transform: translateY(-100%);
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 1500ms cubic-bezier(0.86, 0, 0.07, 1); /* easeInOutQuint */
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-timing-function: cubic-bezier(
+    0.86,
+    0,
+    0.07,
+    1
+  ); /* easeInOutQuint */
+}
+
+.search-popup {
+  width: 100%;
+}
+
+.search-active .search-popup {
+  transform: translateY(0%);
+  margin-top: 0;
+}
+
+.search-popup .close-search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75%;
+  margin: 0 auto;
+  margin-top: -200px;
+  border-radius: 50%;
+  text-align: center;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  width: 70px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid #ffffff;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.search-popup .close-search i {
+  position: relative;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.search-active .search-popup .close-search {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+  -webkit-transition-delay: 1500ms;
+  -moz-transition-delay: 1500ms;
+  -ms-transition-delay: 1500ms;
+  -o-transition-delay: 1500ms;
+  transition-delay: 1500ms;
+}
+
+.search-popup form {
+  position: absolute;
+  max-width: 700px;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  margin: -35px auto 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  background-color: #111111;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.search-active .search-popup form {
+  transform: scaleX(1);
+  -webkit-transition-delay: 1200ms;
+  -moz-transition-delay: 1200ms;
+  -ms-transition-delay: 1200ms;
+  -o-transition-delay: 1200ms;
+  transition-delay: 1200ms;
+}
+
+.search-popup .form-group {
+  position: relative;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.search-popup .form-group input[type="text"],
+.search-popup .form-group input[type="search"] {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 50px;
+  color: #000000;
+  height: 70px;
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.search-popup .form-group input[type="submit"],
+.search-popup .form-group button {
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  height: 70px;
+  line-height: 70px;
+  background: transparent;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  border: none;
+}
+
+.search-popup .form-group input[type="submit"]:hover,
+.search-popup .form-group button:hover {
+  color: #000000;
+}
+
+.search-popup input::placeholder,
+.search-popup textarea::placeholder {
+  color: #000000;
+}
+
+.search-popup .close-search.style-two {
+  position: absolute;
+  right: 25px;
+  left: auto;
+  color: #ffffff;
+  width: auto;
+  height: auto;
+  top: 25px;
+  margin: 0px;
+  border: none;
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.search-popup .close-search.style-two i {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.search-box-btn.search-box-outer i {
+  font-size: 15px;
+  display: inline-block;
+  color: #0a2c3d;
+  cursor: pointer;
+}
+
+/*=============================
+<--  Coursol Nav Css -->
+===============================*/
+
+.owl-nav {
+  position: absolute;
+  bottom: 90px;
+  left: -48%;
+}
+
+.owl-prev {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.owl-next {
+  display: inline-block;
+}
+
+.owl-prev i {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 58px;
+  font-size: 20px;
+  border-radius: 50%;
+  font-weight: 800;
+  background: transparent;
+  border: 2px solid #f02830;
+  color: #f02830;
+}
+
+.owl-prev i:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  transition: 0.5s;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.owl-prev i:hover:after {
+  width: 100%;
+  z-index: -1;
+}
+
+.owl-prev i:hover {
+  color: #fff;
+}
+
+.owl-next i {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  background: transparent;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px transparent;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.owl-next i:hover {
+  color: #f02830;
+}
+
+.owl-next i:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #f02830 6%, #ff5e14 96%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.owl-next i:hover:after {
+  background: transparent;
+  border: 2px solid #f02830;
+}
+
+/*===========================
+<-- Prygo Loader Css -->
+=============================*/
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.8s 1s ease;
+  z-index: 666;
+}
+
+.loader {
+  position: relative;
+  display: block;
+  z-index: 201;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  border-radius: 50%;
+  transition: all 1s 1s ease;
+  border: 3px solid transparent;
+  border-top-color: #9a241c;
+  -webkit-animation: spin 1.5s linear infinite;
+  -moz-animation: spin 1.5s linear infinite;
+  -o-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+.loader:before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-left-color: #ff3c00;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  -o-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.loader:after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-right-color: #fff;
+  -webkit-animation: spin 2.5s linear infinite;
+  -moz-animation: spin 2.5s linear infinite;
+  -o-animation: spin 2.5s linear infinite;
+  animation: spin 2.5s linear infinite;
+}
+
+/*/ Here comes the Magic /*/
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader-wrapper .loder-section {
+  position: fixed;
+  top: 0;
+  width: 52%;
+  height: 100%;
+  background: #111;
+  z-index: 2;
+}
+
+.loader-wrapper .loder-section.left-section {
+  left: 0;
+  transition: 1s 1.4s ease;
+}
+
+.loader-wrapper .loder-section.right-section {
+  right: 0;
+  transition: 1s 1.4s ease;
+}
+
+/*/ When page loaded /*/
+.loaded .loder-section.left-section {
+  left: -100%;
+}
+
+.loaded .loder-section.right-section {
+  right: -100%;
+}
+
+.loaded .loader-wrapper {
+  visibility: hidden;
+}
+
+.loaded .loader {
+  top: -100%;
+  opacity: 0;
+}

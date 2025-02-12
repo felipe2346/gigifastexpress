@@ -1,0 +1,63 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--==================================================-->
+<!-- Start Prygo Breadcumb Area -->
+<!--==================================================-->
+<div class="breadcumb-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="breadcumb-content">
+					<div class="breadcumb-title">
+						<h1>Sign In</h1>
+					</div>
+					<div class="breadcumb-content-menu">
+						<ul>
+							<li><a href="{% url 'frontend:home' %}">Home <i class="fas fa-angle-right"></i></a></li>
+							<li><span>Sign In</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--==================================================-->
+<!-- End Prygo Breadcumb Area -->
+<!--==================================================-->
+
+<!-- track hero -->
+<div class="container py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-center">
+                        Login
+                    </h5>
+                    {% include '../account/include/alert.html' %}
+                    <hr>
+                    <form action="." method="Post">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label text-dark">Username</label>
+                            <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label text-dark">Password</label>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <button class="btn btn-dark w-100 fw-bold" type="submit" id="button-addon2">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

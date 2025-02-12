@@ -1,0 +1,70 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">
+                        List of All Shipments
+                    </h3>
+                    <hr>
+                    {% include './include/alert.html' %}
+                    <div class="table-responsive table-condensed">
+                    {% if shipments %}
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sender</th>
+                                    <th scope="col">Receiver</th>
+                                    <th scope="col">Content</th>
+                                    <th scope="col">Origin Office</th>
+                                    <th scope="col">Destination Office</th>
+                                    <th scope="col">Tracking ID</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            
+                        {% for shipment in shipments %}
+                            <tbody>
+                            
+                                <tr>
+                                    <td>{{shipment.sender_name}}</td>
+                                    <td>{{shipment.receiver_name}}</td>
+                                    <td>{{shipment.content}}</td>
+                                    <td>{{shipment.origin_office}}</td>
+                                    <td>{{shipment.destination_office}}</td>
+                                    <td>{{shipment.tracking_number}}</td>
+                                    <td>
+                                        <a href="{% url 'account:shipment_detail' shipment.id %}" class="btn btn-primary text-white btn-sm fw-bold btn-table">Details</a>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'account:edit_shipment' shipment.id %}" class="btn btn-info text-white btn-sm fw-bold btn-table">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'account:delete_shipment' shipment.id %}" class="btn btn-danger btn-sm fw-bold btn-table">Delete</a>
+                                    </td>
+                                    
+                                    <td></td>
+                                </tr>
+                            
+                            </tbody>
+                        {% endfor %}
+                            
+                        </table>
+                    {% else %}
+                        <div class="text-center">
+                            There is no shipment available to display right now, please <a href="{% url 'account:create_shipment' %}">create a new shipment</a>
+                        </div>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
