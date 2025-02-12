@@ -9,4 +9,4 @@ urlpatterns = [
     path('account/', include('account.urls', namespace='account')),
 ]
 
-# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
