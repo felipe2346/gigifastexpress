@@ -136,9 +136,10 @@ def view_receipt(request, pk):
     live_update = LiveUpdate.objects.filter(shipment=shipment).first()
 
     context = {'shipment':shipment, 'live_update':live_update}
-    return render(request, 'account/receipt.html', context)
+    return render(request, 'account/receipt2.html', context)
 
 
 
-
-
+def generate_pdf(request):
+    response = ''
+    return response

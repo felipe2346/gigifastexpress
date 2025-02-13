@@ -35,7 +35,8 @@
 
 
                 <!-- invoice btn -->
-                 <a href="{% url 'account:view_receipt' shipment.pk %}" class="btn btn-secondary fw-bold mt-2 btn-sm">Generate Invoice</a>
+                 <a href="{% url 'account:view_receipt' shipment.pk %}" class="btn btn-secondary fw-bold mt-2 btn-sm">view Invoice</a>
+                 <a href="{% url 'account:view_receipt' shipment.pk %}" class="btn btn-primary fw-bold mt-2 btn-sm">Download Invoice</a>
                 <hr>
 
                 <!-- live tracking html -->
