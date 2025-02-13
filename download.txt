@@ -1,0 +1,80 @@
+pip install weasyprint
+
+
+from django.http import HttpResponse
+from weasyprint import HTML
+from django.template.loader import render_to_string
+from django.shortcuts import render
+
+def generate_receipt_pdf(request):
+    # Prepare the context for your receipt
+    context = {
+        'order_id': 12345,
+        'customer_name': request.user.username,
+        'date': datetime.datetime.now(),
+        'items': [
+            {"name": "Item 1", "price": 20.00},
+            {"name": "Item 2", "price": 15.00},
+        ],
+        'total': 35.00,
+    }
+
+    # Render the receipt HTML template
+    html_string = render_to_string('receipt_template.html', context)
+
+    # Convert the rendered HTML to PDF
+    pdf_file = HTML(string=html_string).write_pdf()
+
+    # Return the PDF as a downloadable response
+    response = HttpResponse(pdf_file, content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="receipt.pdf"'
+    return response
+
+
+# urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('generate-receipt-pdf/', views.generate_receipt_pdf, name='generate_receipt_pdf'),
+]
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5">Receipt</h2>
+        <p><strong>Order ID:</strong> {{ order_id }}</p>
+        <p><strong>Customer:</strong> {{ customer_name }}</p>
+        <p><strong>Date:</strong> {{ date }}</p>
+
+        <h4>Items Purchased:</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>${{ item.price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <hr>
+        <h4>Total: ${{ total }}</h4>
+    </div>
+</body>
+</html>

@@ -138,3 +138,7 @@ def view_receipt(request, pk):
     context = {'shipment':shipment, 'live_update':live_update}
     return render(request, 'account/receipt.html', context)
 
+
+
+
+
