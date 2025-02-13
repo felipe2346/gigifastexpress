@@ -136,10 +136,46 @@ def view_receipt(request, pk):
     live_update = LiveUpdate.objects.filter(shipment=shipment).first()
 
     context = {'shipment':shipment, 'live_update':live_update}
-    return render(request, 'account/receipt2.html', context)
+    return render(request, 'account/receipt.html', context)
 
 
 
-def generate_pdf(request):
-    response = ''
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from xhtml2pdf import pisa
+from django.conf import settings
+import os
+
+def generate_receipt(request, pk):
+    shipment = Shipment.objects.get(pk=pk)
+    live_update = LiveUpdate.objects.filter(shipment=shipment).first()
+    
+    # Path to the logo image
+    logo_path = os.path.join(settings.BASE_DIR, 'static', 'frontend', 'assets', 'images', 'gigifast_logoyellow.png')
+
+    qr_path = os.path.join(settings.BASE_DIR, 'static', 'frontend', 'assets', 'images', 'qrcode2.jpeg')
+
+    # Prepare context for the template
+    context = {
+        'shipment': shipment,
+        'status': live_update.status,
+        'logo_url': logo_path,
+        'qr_code': qr_path
+    }
+
+    # Render the HTML template
+    html = render(request, 'account/receipt2.html', context).content
+
+    # Create the PDF response
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="shipment-receipt.pdf"'
+
+    # Convert the HTML to PDF
+    pisa_status = pisa.CreatePDF(html, dest=response)
+
+    # Return the response
+    if pisa_status.err:
+        return HttpResponse("Error generating PDF", status=500)
+    
     return response

@@ -15,5 +15,5 @@ urlpatterns = [
     path('delete_live_update/<pk>/', views.delete_live_update, name='delete_live_update'),
     path('view_receipt/<pk>/', views.view_receipt, name='view_receipt'),
 
-    path('download-receipt/', views.generate_pdf, name='download_receipt'),
+    path('download-receipt/<pk>/', views.generate_receipt, name='download_receipt'),
 ]

@@ -32,7 +32,7 @@
             border: 4px solid #f57702;
         }
         table {
-            width: 100%;
+            width: 600px;
             border-collapse: collapse;
         }
         table, th, td {
@@ -62,9 +62,9 @@
         img{
             width: 100%;
         }
-        .table2{
+        /* .table2{
             font-size: 12px !important;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -74,16 +74,20 @@
                 <tbody>
                     <tr>
                         <td style="background-color: #202020;" class="table_logo">
-                            <img src="{% static 'frontend/assets/images/gigifast_logoyellow.png' %}" alt="GIGIFAST EXPRESS" class="img-fluid">
+                            <img src="{{logo_url}}" alt="GIGIFAST EXPRESS" class="img-fluid">
+                            <!-- <img src="{% static 'frontend/assets/images/gigifast_logoyellow.png' %}" alt="GIGIFAST EXPRESS" class="img-fluid"> -->
                             <!-- <p class="logo_text" style="text-align: center; margin-top: 10px; color: #fff;">GIGIFAST EXPRESS</p> -->
                         </td>
                         <td class="table_logo">
-                            <img src="{% static 'frontend/assets/images/qrcode2.jpeg' %}" alt="" class="img-fluid qr_image">
+                            <img src="{{qr_code}}" alt="" class="img-fluid qr_image" style="width: 100%;">
                             <p style="text-align: center;">{{shipment.tracking_number}}</p>
                         </td>
-                        <td class="table_logo" style="padding: 0;">
-                            <table class="table2" style="width: 100%; height: 100%;">
-                                <tr>
+                        <td style="background-color: #202020;" class="table_logo">
+                            <img src="{{logo_url}}" alt="GIGIFAST EXPRESS" class="img-fluid">
+                        </td>
+                        <!-- <td class="table_logo" style="padding: 0;">
+                            <table class="table2" style="width: 250px; height: 150px;">
+                                <tr style="width: 250px;">
                                     <td><strong>Depature Date: </strong> <br>{{shipment.shipping_date}}</td>
                                     <td><strong>Delivery Date: </strong><br>{{shipment.delivery_date}}</td>
                                 </tr>
@@ -93,14 +97,23 @@
                                 </tr>
                                 <tr>
                                     <td><strong>Weight: </strong> <br>{{shipment.weight}}</td>
-                                    <!-- <td>Row 2, Col 2</td> -->  
                                 </tr>
                                 <tr>
                                     <td><strong>Pickup Date: </strong> <br>__________</td>
                                     <td><strong>Pickup Time: </strong><br>___________</td> 
                                 </tr>
                             </table>
-                        </td>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <td><strong>Depature Date: </strong> <br>{{shipment.shipping_date}}</td>
+                        <td><strong>Delivery Date: </strong><br>{{shipment.delivery_date}}</td>
+                        <td><strong>Weight: </strong> <br>{{shipment.weight}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Origin: </strong> <br>{{shipment.origin_office}}</td>
+                        <td><strong>Destination: </strong><br>{{shipment.destination_office}}</td>  
+                        <td><strong>Pickup Time: </strong><br>___________</td> 
                     </tr>
                     <tr>
                         <td><strong>Shipper's Name:</strong> <br>{{shipment.sender_name}}</td>
@@ -114,7 +127,7 @@
                     </tr>
                     <tr>
                         <td><strong>Shipping Type:</strong><br> {{shipment.shipping_type}}</td>
-                        <td><strong>Status</strong> <br>{{live_update.status}}</td>
+                        <td><strong>Status</strong> <br>{{status}}</td>
                         <td><strong>Booking Mode: </strong><br>{{shipment.booking_mode}}</td>
                     </tr>
                 </tbody>
