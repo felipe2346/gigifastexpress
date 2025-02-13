@@ -149,7 +149,13 @@ import os
 
 def generate_receipt(request, pk):
     shipment = Shipment.objects.get(pk=pk)
-    live_update = LiveUpdate.objects.filter(shipment=shipment).first()
+    try:
+        status_update = LiveUpdate.objects.filter(shipment=shipment).first().status
+    except AttributeError:
+        status_update = "Dispatched"
+    except LiveUpdate.DoesNotExist:
+        status_update = "Dispatched"
+    
     
     # Path to the logo image
     logo_path = os.path.join(settings.BASE_DIR, 'static', 'frontend', 'assets', 'images', 'gigifast_logoyellow.png')
@@ -159,7 +165,7 @@ def generate_receipt(request, pk):
     # Prepare context for the template
     context = {
         'shipment': shipment,
-        'status': live_update.status,
+        'status': status_update,
         'logo_url': logo_path,
         'qr_code': qr_path
     }
